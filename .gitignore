@@ -1,0 +1,5 @@
+# Full-res originals from DinTur — kept locally for re-cropping, not deployed
+_originals/
+
+# macOS
+.DS_Store
