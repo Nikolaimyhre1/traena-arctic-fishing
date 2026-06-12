@@ -348,6 +348,21 @@ img { max-width: 100%; display: block; }
 .amenity { background: var(--sea); color: var(--foam); font-size: .9rem;
   padding: .5rem 1rem; border-radius: 999px; }
 
+/* ---------- "what's included" list ---------- */
+.includes-list { list-style: none; display: grid; gap: .9rem; max-width: 640px; }
+.includes-list li {
+  position: relative; padding: 0 0 .9rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  color: rgba(243,246,245,.92); font-size: 1.05rem;
+}
+.includes-list li:last-child { border-bottom: none; }
+.includes-list li::before {
+  content: ""; position: absolute; left: .2rem; top: .5em;
+  width: .75rem; height: .42rem; border-left: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold); transform: rotate(-45deg);
+}
+.includes-note { margin-top: 1.8rem; max-width: 640px; color: var(--slate); font-size: .92rem; }
+
 /* ---------- units (apartment cards) ---------- */
 .units { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .unit { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
