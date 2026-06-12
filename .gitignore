@@ -1,6 +1,7 @@
 # Source photo libraries — kept locally for re-cropping, not deployed
 _originals/
 _brochure/
+_dintur/
 
 # macOS
 .DS_Store

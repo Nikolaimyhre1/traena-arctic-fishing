@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Træna Arctic Fishing — Havfiske på Selvær</title>
-  <meta name="description" content="Havfiske ytterst mot storhavet. Moderne leiligheter på kaikanten, egne båter og noen av Norges beste fiskeplasser — på Selvær i Træna." />
+  <meta name="description" content="Havfiske ytterst mot storhavet. Moderne leiligheter ved kaia, egne båter og noen av Norges beste fiskeplasser — på Selvær i Træna." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -31,6 +31,11 @@
       <span class="lang__sep">/</span>
       <span class="lang__opt" data-lang="de">DE</span>
     </button>
+    <button class="cur" id="curToggle" type="button" aria-label="Valuta / Currency / Währung">
+      <span class="cur__opt is-active" data-cur="nok">NOK</span>
+      <span class="lang__sep">/</span>
+      <span class="cur__opt" data-cur="eur">EUR</span>
+    </button>
   </header>
 
   <!-- ============ HERO ============ -->
@@ -43,9 +48,9 @@
           data-en="Deep-sea fishing at the&nbsp;edge of the open sea"
           data-de="Hochseeangeln am&nbsp;Rand des offenen Meeres">Havfiske ytterst&nbsp;mot storhavet</h1>
       <p class="hero__lead"
-         data-no="Moderne leiligheter på kaikanten, egne båter og noen av landets beste fiskeplasser rett utenfor stuedøra."
-         data-en="Modern apartments on the quay, your own boat, and some of Norway's best fishing grounds right outside the door."
-         data-de="Moderne Wohnungen am Kai, ein eigenes Boot und einige der besten Angelplätze Norwegens direkt vor der Tür.">Moderne leiligheter på kaikanten, egne båter og noen av landets beste fiskeplasser rett utenfor stuedøra.</p>
+         data-no="Moderne leiligheter ved kaia, egne båter og noen av landets beste fiskeplasser rett utenfor døra."
+         data-en="Modern apartments by the quay, your own boat, and some of Norway's best fishing grounds right outside the door."
+         data-de="Moderne Wohnungen am Kai, ein eigenes Boot und einige der besten Angelplätze Norwegens direkt vor der Tür.">Moderne leiligheter ved kaia, egne båter og noen av landets beste fiskeplasser rett utenfor døra.</p>
       <div class="hero__actions">
         <a href="booking.html" class="btn btn--gold" data-no="Book din reise" data-en="Book your trip" data-de="Reise buchen">Book din reise</a>
         <a href="fiske.html" class="btn btn--ghost" data-no="Se fisket" data-en="The fishing" data-de="Zum Angeln">Se fisket</a>
@@ -58,10 +63,10 @@
   <section class="strip">
     <div class="strip__item">
       <span class="strip__num">6</span>
-      <span class="strip__label" data-no="leiligheter på kaia" data-en="apartments on the quay" data-de="Wohnungen am Kai">leiligheter på kaia</span>
+      <span class="strip__label" data-no="leiligheter ved kaia" data-en="apartments by the quay" data-de="Wohnungen am Kai">leiligheter ved kaia</span>
     </div>
     <div class="strip__item">
-      <span class="strip__num">8</span>
+      <span class="strip__num">7</span>
       <span class="strip__label" data-no="båter, 115–150 hk" data-en="boats, 115–150 hp" data-de="Boote, 115–150 PS">båter, 115–150 hk</span>
     </div>
     <div class="strip__item">
@@ -78,19 +83,19 @@
     </div>
     <div class="split">
       <div class="split__text">
-        <p data-no="Seks moderne leiligheter ligger på rekke langs kaia. Hver er på 75–85 m² med tre soverom, fullt utstyrt kjøkken, gratis wifi og Bluetooth-lyd. Du går rett fra frokostbordet og ned i båten."
-           data-en="Six modern apartments line the quay. Each is 75–85 m² with three bedrooms, a fully equipped kitchen, free wi-fi and a Bluetooth sound system. Step from the breakfast table straight down into the boat."
-           data-de="Sechs moderne Wohnungen reihen sich am Kai. Jede ist 75–85 m² groß, mit drei Schlafzimmern, voll ausgestatteter Küche, kostenlosem WLAN und Bluetooth-Anlage. Vom Frühstückstisch geht es direkt ins Boot.">Seks moderne leiligheter ligger på rekke langs kaia. Hver er på 75–85 m² med tre soverom, fullt utstyrt kjøkken, gratis wifi og Bluetooth-lyd. Du går rett fra frokostbordet og ned i båten.</p>
+        <p data-no="Seks moderne leiligheter ligger på rekke ved kaia. Fem har tre soverom på 75–85 m²; Vegardbryggen er en koselig ettromsleilighet på 38 m². Fullt utstyrt kjøkken, gratis wifi og Bluetooth-lyd. Du går rett fra frokostbordet og ned i båten."
+           data-en="Six modern apartments line the quay. Five have three bedrooms at 75–85 m²; Vegardbryggen is a cosy 38 m² one-bedroom. Fully equipped kitchen, free wi-fi and a Bluetooth sound system. Step from the breakfast table straight down into the boat."
+           data-de="Sechs moderne Wohnungen reihen sich am Kai. Fünf haben drei Schlafzimmer mit 75–85 m²; Vegardbryggen ist eine gemütliche 38-m²-Einzimmerwohnung. Voll ausgestattete Küche, kostenloses WLAN und Bluetooth-Anlage. Vom Frühstückstisch geht es direkt ins Boot.">Seks moderne leiligheter ligger på rekke ved kaia. Fem har tre soverom på 75–85 m²; Vegardbryggen er en koselig ettromsleilighet på 38 m². Fullt utstyrt kjøkken, gratis wifi og Bluetooth-lyd. Du går rett fra frokostbordet og ned i båten.</p>
         <ul class="ticks">
-          <li data-no="75–85 m², tre soverom" data-en="75–85 m², three bedrooms" data-de="75–85 m², drei Schlafzimmer">75–85 m², tre soverom</li>
+          <li data-no="38–85 m², 1–3 soverom" data-en="38–85 m², 1–3 bedrooms" data-de="38–85 m², 1–3 Schlafzimmer">38–85 m², 1–3 soverom</li>
           <li data-no="Fullt utstyrt kjøkken" data-en="Fully equipped kitchen" data-de="Voll ausgestattete Küche">Fullt utstyrt kjøkken</li>
           <li data-no="Gratis wifi og Bluetooth-lyd" data-en="Free wi-fi and Bluetooth sound" data-de="Kostenloses WLAN und Bluetooth-Anlage">Gratis wifi og Bluetooth-lyd</li>
-          <li data-no="Rett på kaikanten" data-en="Right on the waterfront" data-de="Direkt am Wasser">Rett på kaikanten</li>
+          <li data-no="Rett ved kaia" data-en="Right by the quay" data-de="Direkt am Wasser">Rett ved kaia</li>
         </ul>
         <a href="facilities.html" class="textlink" data-no="Se alle leilighetene →" data-en="See all apartments →" data-de="Alle Wohnungen ansehen →">Se alle leilighetene →</a>
       </div>
       <figure class="split__media" data-img="leiligheter" role="img"
-              aria-label="Leilighetene på kaia, sett fra luften"></figure>
+              aria-label="Leilighetene ved kaia, sett fra luften"></figure>
     </div>
   </section>
 
@@ -102,11 +107,11 @@
     </div>
     <div class="split split--reverse">
       <div class="split__text">
-        <p data-no="Velg blant åtte stødige aluminiumsbåter på 22–24 fot med 115–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene."
-           data-en="Choose from eight sturdy 22–24 foot aluminium boats with 115–150 horsepower engines — well suited to deep-water fishing out toward the open sea. Set your own pace: work the skerries close in, or head out to the real honey holes."
-           data-de="Wählen Sie aus acht robusten Aluminiumbooten von 22–24 Fuß mit 115–150 PS — bestens geeignet fürs Tiefseeangeln draußen am offenen Meer. Sie bestimmen das Tempo: ruhig entlang der Schären oder hinaus zu den wirklich guten Plätzen.">Velg blant åtte stødige aluminiumsbåter på 22–24 fot med 115–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene.</p>
+        <p data-no="Velg blant sju stødige aluminiumsbåter på 22–24,5 fot med 115–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene."
+           data-en="Choose from seven sturdy 22–24.5 foot aluminium boats with 115–150 horsepower engines — well suited to deep-water fishing out toward the open sea. Set your own pace: work the skerries close in, or head out to the real honey holes."
+           data-de="Wählen Sie aus sieben robusten Aluminiumbooten von 22–24,5 Fuß mit 115–150 PS — bestens geeignet fürs Tiefseeangeln draußen am offenen Meer. Sie bestimmen das Tempo: ruhig entlang der Schären oder hinaus zu den wirklich guten Plätzen.">Velg blant sju stødige aluminiumsbåter på 22–24,5 fot med 115–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene.</p>
         <ul class="ticks">
-          <li data-no="8 aluminiumsbåter, 22–24 fot" data-en="8 aluminium boats, 22–24 foot" data-de="8 Aluminiumboote, 22–24 Fuß">8 aluminiumsbåter, 22–24 fot</li>
+          <li data-no="7 aluminiumsbåter, 22–24,5 fot" data-en="7 aluminium boats, 22–24.5 foot" data-de="7 Aluminiumboote, 22–24,5 Fuß">7 aluminiumsbåter, 22–24,5 fot</li>
           <li data-no="115–150 hk påhengsmotor" data-en="115–150 hp engine" data-de="115–150 PS Motor">115–150 hk påhengsmotor</li>
           <li data-no="Ekkolodd og GPS-plotter" data-en="Echo sounder and GPS plotter" data-de="Echolot und GPS-Plotter">Ekkolodd og GPS-plotter</li>
         </ul>
@@ -169,9 +174,9 @@
     <div class="feature__panel">
       <p class="eyebrow" data-no="Stedet" data-en="The place" data-de="Der Ort">Stedet</p>
       <h2 data-no="Et fiskevær mot åpent hav" data-en="A fishing village facing the open sea" data-de="Ein Fischerdorf am offenen Meer">Et fiskevær mot åpent hav</h2>
-      <p data-no="Selvær er den nest største øya i Træna-arkipelet, langt ute på Helgelandskysten. Som resten av Træna vender alt her mot storhavet. Tusenvis av holmer og skjær, yrende fugleliv, og lyse netter som varer til langt på sommeren."
-         data-en="Selvær is the second-largest island in the Træna archipelago, far out on the Helgeland coast. Like the rest of Træna, everything here faces the open sea. Thousands of islets and skerries, teeming birdlife, and bright nights that linger deep into summer."
-         data-de="Selvær ist die zweitgrößte Insel des Træna-Archipels, weit draußen an der Helgeland-Küste. Wie ganz Træna ist hier alles dem offenen Meer zugewandt. Tausende Inseln und Schären, reiches Vogelleben und helle Nächte bis tief in den Sommer.">Selvær er den nest største øya i Træna-arkipelet, langt ute på Helgelandskysten. Som resten av Træna vender alt her mot storhavet. Tusenvis av holmer og skjær, yrende fugleliv, og lyse netter som varer til langt på sommeren.</p>
+      <p data-no="Selvær er den nest største øya i Træna kommune, langt ute på Helgelandskysten. Som resten av Træna vender alt her mot storhavet. Tusenvis av holmer og skjær, yrende fugleliv, og lyse netter som varer til langt på sommeren."
+         data-en="Selvær is the second-largest island in Træna municipality, far out on the Helgeland coast. Like the rest of Træna, everything here faces the open sea. Thousands of islets and skerries, teeming birdlife, and bright nights that linger deep into summer."
+         data-de="Selvær ist die zweitgrößte Insel der Gemeinde Træna, weit draußen an der Helgeland-Küste. Wie ganz Træna ist hier alles dem offenen Meer zugewandt. Tausende Inseln und Schären, reiches Vogelleben und helle Nächte bis tief in den Sommer.">Selvær er den nest største øya i Træna kommune, langt ute på Helgelandskysten. Som resten av Træna vender alt her mot storhavet. Tusenvis av holmer og skjær, yrende fugleliv, og lyse netter som varer til langt på sommeren.</p>
       <p data-no="På øya finnes dagligvarebutikk og en liten selvbetjent kafé. Du kan ta bil med på ferja alle dager unntatt lørdag. Resten er ro, sjø og himmel."
          data-en="The island has a grocery store and a small self-service café. You can bring a car on the ferry every day except Saturday. The rest is quiet, sea and sky."
          data-de="Auf der Insel gibt es einen Lebensmittelladen und ein kleines Selbstbedienungscafé. Sie können das Auto an allen Tagen außer samstags auf die Fähre mitnehmen. Der Rest ist Ruhe, Meer und Himmel.">På øya finnes dagligvarebutikk og en liten selvbetjent kafé. Du kan ta bil med på ferja alle dager unntatt lørdag. Resten er ro, sjø og himmel.</p>
@@ -242,7 +247,7 @@
     </div>
     <div class="footer__contact">
       <a href="mailto:traenaarctic@gmail.com">traenaarctic@gmail.com</a>
-      <a href="tel:+4797524099">+47 975 24 099</a>
+      <a href="tel:+4790846461">+47 908 46 461</a>
       <div class="footer__social">
         <a href="https://www.instagram.com/traenaarcticfishing/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.facebook.com/trenaarcticfishing/" target="_blank" rel="noopener">Facebook</a>

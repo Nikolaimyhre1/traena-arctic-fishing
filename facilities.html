@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leiligheter — Træna Arctic Fishing</title>
-  <meta name="description" content="Seks moderne leiligheter på bryggekanten på Selvær — fullt utstyrt, tre soverom, rett ved båten." />
+  <title>Fasiliteter — Træna Arctic Fishing</title>
+  <meta name="description" content="Seks moderne leiligheter ved kaia på Selvær — fullt utstyrt, rett ved båten." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -30,16 +30,21 @@
       <span class="lang__sep">/</span>
       <span class="lang__opt" data-lang="de">DE</span>
     </button>
+    <button class="cur" id="curToggle" type="button" aria-label="Valuta / Currency / Währung">
+      <span class="cur__opt is-active" data-cur="nok">NOK</span>
+      <span class="lang__sep">/</span>
+      <span class="cur__opt" data-cur="eur">EUR</span>
+    </button>
   </header>
 
   <section class="pagehero" style="background-image:linear-gradient(180deg,rgba(7,23,31,.35),rgba(7,23,31,.78)),url('images/facilities-aerial.jpg')">
     <div class="pagehero__inner">
       <p class="eyebrow" data-no="Fasiliteter" data-en="Facilities" data-de="Ausstattung">Fasiliteter</p>
-      <h1 data-no="Bo på bryggekanten" data-en="Stay on the quayside" data-de="Wohnen am Kai">Bo på bryggekanten</h1>
+      <h1 data-no="Bo ved kaia" data-en="Stay by the quay" data-de="Wohnen am Kai">Bo ved kaia</h1>
       <p class="pagehero__lead"
-         data-no="Seks moderne leiligheter ligger rett på kaia — du går fra senga til båten på et minutt."
-         data-en="Six modern apartments sit right on the quay — a minute from your bed to the boat."
-         data-de="Sechs moderne Wohnungen liegen direkt am Kai — eine Minute vom Bett zum Boot.">Seks moderne leiligheter ligger rett på kaia — du går fra senga til båten på et minutt.</p>
+         data-no="Seks moderne leiligheter ligger rett ved kaia — du går fra senga til båten på et minutt."
+         data-en="Six modern apartments sit right by the quay — a minute from your bed to the boat."
+         data-de="Sechs moderne Wohnungen liegen direkt am Kai — eine Minute vom Bett zum Boot.">Seks moderne leiligheter ligger rett ved kaia — du går fra senga til båten på et minutt.</p>
     </div>
   </section>
 
@@ -48,9 +53,9 @@
       <p class="eyebrow" data-no="Slik bor du" data-en="How you live" data-de="So wohnen Sie">Slik bor du</p>
       <h2 data-no="Plass til hele gjengen" data-en="Room for the whole crew" data-de="Platz für die ganze Crew">Plass til hele gjengen</h2>
       <p class="section__lead"
-         data-no="Hver leilighet er på 75–85 m² med tre soverom og fullt utstyrt kjøkken. Pris inkluderer sengetøy, håndklær, strøm, vann og Wi-Fi. Store vinduer mot sjøen, og egen terrasse å nyte kveldssola fra."
-         data-en="Each apartment is 75–85 m² with three bedrooms and a fully equipped kitchen. The price includes bedding, towels, electricity, water and Wi-Fi. Large windows face the sea, with your own terrace for the evening sun."
-         data-de="Jede Wohnung ist 75–85 m² groß, mit drei Schlafzimmern und voll ausgestatteter Küche. Im Preis enthalten: Bettwäsche, Handtücher, Strom, Wasser und WLAN. Große Fenster zum Meer und eine eigene Terrasse für die Abendsonne.">Hver leilighet er på 75–85 m² med tre soverom og fullt utstyrt kjøkken. Pris inkluderer sengetøy, håndklær, strøm, vann og Wi-Fi. Store vinduer mot sjøen, og egen terrasse å nyte kveldssola fra.</p>
+         data-no="Fem av leilighetene er på 75–85 m² med tre soverom og fullt utstyrt kjøkken. Vegardbryggen er en koselig leilighet på 38 m² med åpen planløsning og ett soverom. Pris inkluderer sengetøy, håndklær, strøm, vann og Wi-Fi, og hver leilighet har egen terrasse mot sjøen."
+         data-en="Five of the apartments are 75–85 m² with three bedrooms and a fully equipped kitchen. Vegardbryggen is a cosy 38 m² apartment with an open-plan layout and one bedroom. The price includes bedding, towels, electricity, water and Wi-Fi, and every apartment has its own terrace facing the sea."
+         data-de="Fünf der Wohnungen sind 75–85 m² groß, mit drei Schlafzimmern und voll ausgestatteter Küche. Vegardbryggen ist eine gemütliche 38-m²-Wohnung mit offenem Grundriss und einem Schlafzimmer. Im Preis enthalten: Bettwäsche, Handtücher, Strom, Wasser und WLAN, und jede Wohnung hat eine eigene Terrasse zum Meer.">Fem av leilighetene er på 75–85 m² med tre soverom og fullt utstyrt kjøkken. Vegardbryggen er en koselig leilighet på 38 m² med åpen planløsning og ett soverom. Pris inkluderer sengetøy, håndklær, strøm, vann og Wi-Fi, og hver leilighet har egen terrasse mot sjøen.</p>
     </div>
 
     <div class="photo-grid">
@@ -63,8 +68,8 @@
         <figcaption data-no="Spisestue med havutsikt" data-en="Dining room with sea view" data-de="Esszimmer mit Meerblick">Spisestue med havutsikt</figcaption>
       </figure>
       <figure class="photo">
-        <img src="images/apt-bedroom.jpg" alt="Et av tre soverom" loading="lazy" />
-        <figcaption data-no="Et av tre soverom" data-en="One of three bedrooms" data-de="Eines von drei Schlafzimmern">Et av tre soverom</figcaption>
+        <img src="images/apt-bedroom.jpg" alt="Et av soverommene" loading="lazy" />
+        <figcaption data-no="Et av soverommene" data-en="One of the bedrooms" data-de="Eines der Schlafzimmer">Et av soverommene</figcaption>
       </figure>
       <figure class="photo">
         <img src="images/apt-balcony.jpg" alt="Egen terrasse mot sjøen" loading="lazy" />
@@ -108,20 +113,62 @@
   <section class="section section--alt">
     <div class="section__head">
       <p class="eyebrow" data-no="Leilighetene" data-en="The apartments" data-de="Die Wohnungen">Leilighetene</p>
-      <h2 data-no="Seks leiligheter på kaia" data-en="Six apartments on the quay" data-de="Sechs Wohnungen am Kai">Seks leiligheter på kaia</h2>
+      <h2 data-no="Seks leiligheter ved kaia" data-en="Six apartments by the quay" data-de="Sechs Wohnungen am Kai">Seks leiligheter ved kaia</h2>
       <p class="section__lead"
          data-no="Hver leilighet har sitt eget navn — etter fiskebanker, fjelltopper og gamle båter fra Selvær."
          data-en="Each apartment has its own name — after fishing banks, peaks and old boats from Selvær."
          data-de="Jede Wohnung hat ihren eigenen Namen — nach Fischbänken, Gipfeln und alten Booten aus Selvær.">Hver leilighet har sitt eget navn — etter fiskebanker, fjelltopper og gamle båter fra Selvær.</p>
     </div>
-    <ul class="namegrid">
-      <li><span class="namegrid__no">1</span> Grønnrevet</li>
-      <li><span class="namegrid__no">2</span> Nargtind</li>
-      <li><span class="namegrid__no">3</span> Svanen</li>
-      <li><span class="namegrid__no">4</span> Sandflæsa</li>
-      <li><span class="namegrid__no">5</span> Selværgutt</li>
-      <li><span class="namegrid__no">6</span> Vegardbryggen</li>
-    </ul>
+    <div class="units">
+      <article class="unit">
+        <div class="unit__img" style="background-image:url('images/apt-gronnrevet.jpg')" role="img" aria-label="Grønnrevet"></div>
+        <div class="unit__body">
+          <h3>1 · Grønnrevet</h3>
+          <p class="unit__meta" data-no="75 m² · 3 soverom" data-en="75 m² · 3 bedrooms" data-de="75 m² · 3 Schlafzimmer">75 m² · 3 soverom</p>
+          <p class="unit__desc" data-no="Oppkalt etter et fiskegrunne rett utenfor. Lyst kjøkken og god plass rundt bordet etter en dag på havet." data-en="Named after a fishing reef just offshore. A bright kitchen and room around the table after a day at sea." data-de="Benannt nach einem Fischriff direkt vor der Küste. Helle Küche und viel Platz am Tisch nach einem Tag auf See.">Oppkalt etter et fiskegrunne rett utenfor. Lyst kjøkken og god plass rundt bordet etter en dag på havet.</p>
+        </div>
+      </article>
+      <article class="unit">
+        <div class="unit__img" style="background-image:url('images/apt-nargtind.jpg')" role="img" aria-label="Nargtind"></div>
+        <div class="unit__body">
+          <h3>2 · Nargtind</h3>
+          <p class="unit__meta" data-no="75 m² · 3 soverom" data-en="75 m² · 3 bedrooms" data-de="75 m² · 3 Schlafzimmer">75 m² · 3 soverom</p>
+          <p class="unit__desc" data-no="Bærer navnet til fjelltoppen i horisonten. Store vinduer og kveldssol inn i stua." data-en="Carries the name of the peak on the horizon. Big windows and evening sun in the living room." data-de="Trägt den Namen des Gipfels am Horizont. Große Fenster und Abendsonne im Wohnzimmer.">Bærer navnet til fjelltoppen i horisonten. Store vinduer og kveldssol inn i stua.</p>
+        </div>
+      </article>
+      <article class="unit">
+        <div class="unit__img" style="background-image:url('images/apt-svanen.jpg')" role="img" aria-label="Svanen"></div>
+        <div class="unit__body">
+          <h3>3 · Svanen</h3>
+          <p class="unit__meta" data-no="75 m² · 3 soverom" data-en="75 m² · 3 bedrooms" data-de="75 m² · 3 Schlafzimmer">75 m² · 3 soverom</p>
+          <p class="unit__desc" data-no="Etter en av de gamle båtene i været. Åpen stue og kjøkken med sjøen som nærmeste nabo." data-en="After one of the old boats in the village. Open living room and kitchen with the sea as nearest neighbour." data-de="Nach einem der alten Boote im Ort. Offenes Wohnzimmer und Küche mit dem Meer als nächstem Nachbarn.">Etter en av de gamle båtene i været. Åpen stue og kjøkken med sjøen som nærmeste nabo.</p>
+        </div>
+      </article>
+      <article class="unit">
+        <div class="unit__img" style="background-image:url('images/apt-sandflaesa.jpg')" role="img" aria-label="Sandflæsa"></div>
+        <div class="unit__body">
+          <h3>4 · Sandflæsa</h3>
+          <p class="unit__meta" data-no="75 m² · 3 soverom" data-en="75 m² · 3 bedrooms" data-de="75 m² · 3 Schlafzimmer">75 m² · 3 soverom</p>
+          <p class="unit__desc" data-no="Navn fra en grunne i havgapet. Praktisk kjøkken og samlingssted for hele fiskefølget." data-en="Named after a shoal out in the open sea. A practical kitchen and gathering spot for the whole fishing party." data-de="Benannt nach einer Untiefe draußen im offenen Meer. Praktische Küche und Treffpunkt für die ganze Angeltruppe.">Navn fra en grunne i havgapet. Praktisk kjøkken og samlingssted for hele fiskefølget.</p>
+        </div>
+      </article>
+      <article class="unit">
+        <div class="unit__img" style="background-image:url('images/apt-selvaergutt.jpg')" role="img" aria-label="Selværgutt"></div>
+        <div class="unit__body">
+          <h3>5 · Selværgutt</h3>
+          <p class="unit__meta" data-no="85 m² · 3 soverom" data-en="85 m² · 3 bedrooms" data-de="85 m² · 3 Schlafzimmer">85 m² · 3 soverom</p>
+          <p class="unit__desc" data-no="Den største leiligheten på 85 m², oppkalt etter en gammel selværbåt. Tre soverom med plass til et stort lag." data-en="The largest apartment at 85 m², named after an old Selvær boat. Three bedrooms with room for a big crew." data-de="Die größte Wohnung mit 85 m², benannt nach einem alten Selvær-Boot. Drei Schlafzimmer mit Platz für eine große Crew.">Den største leiligheten på 85 m², oppkalt etter en gammel selværbåt. Tre soverom med plass til et stort lag.</p>
+        </div>
+      </article>
+      <article class="unit">
+        <div class="unit__img" style="background-image:url('images/apt-vegardbryggen.jpg')" role="img" aria-label="Vegardbryggen"></div>
+        <div class="unit__body">
+          <h3>6 · Vegardbryggen</h3>
+          <p class="unit__meta" data-no="38 m² · 1 soverom (åpen plan)" data-en="38 m² · 1 bedroom (open plan)" data-de="38 m² · 1 Schlafzimmer (offener Grundriss)">38 m² · 1 soverom (åpen plan)</p>
+          <p class="unit__desc" data-no="Den minste og koseligste — 38 m² med åpen planløsning og ett soverom. Fin for to–tre." data-en="The smallest and cosiest — 38 m² with an open-plan layout and one bedroom. Nice for two or three." data-de="Die kleinste und gemütlichste — 38 m² mit offenem Grundriss und einem Schlafzimmer. Schön für zwei bis drei.">Den minste og koseligste — 38 m² med åpen planløsning og ett soverom. Fin for to–tre.</p>
+        </div>
+      </article>
+    </div>
 
     <div class="section__cta">
       <a href="booking.html" class="btn btn--gold" data-no="Se priser og book" data-en="See prices and book" data-de="Preise ansehen und buchen">Se priser og book</a>
@@ -135,7 +182,7 @@
     </div>
     <div class="footer__contact">
       <a href="mailto:traenaarctic@gmail.com">traenaarctic@gmail.com</a>
-      <a href="tel:+4797524099">+47 975 24 099</a>
+      <a href="tel:+4790846461">+47 908 46 461</a>
       <div class="footer__social">
         <a href="https://www.instagram.com/traenaarcticfishing/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.facebook.com/trenaarcticfishing/" target="_blank" rel="noopener">Facebook</a>
