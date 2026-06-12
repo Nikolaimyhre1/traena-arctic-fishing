@@ -14,21 +14,22 @@
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
-    <a href="#hjem" class="nav__brand">
+    <a href="index.html" class="nav__brand">
       <span class="nav__mark">TAF</span>
       <span class="nav__name">Træna Arctic Fishing</span>
     </a>
     <nav class="nav__links">
-      <a href="#opphold" data-no="Opphold" data-en="Stay">Opphold</a>
-      <a href="#bater" data-no="Båter" data-en="Boats">Båter</a>
-      <a href="#fiske" data-no="Fiske" data-en="Fishing">Fiske</a>
-      <a href="#selvar" data-no="Selvær" data-en="Selvær">Selvær</a>
-      <a href="#booking" class="nav__cta" data-no="Forespørsel" data-en="Enquire">Forespørsel</a>
+      <a href="facilities.html" data-no="Leiligheter" data-en="Apartments" data-de="Wohnungen">Leiligheter</a>
+      <a href="fiske.html" data-no="Fiske" data-en="Fishing" data-de="Angeln">Fiske</a>
+      <a href="index.html#selvar" data-no="Selvær" data-en="Selvær" data-de="Selvær">Selvær</a>
+      <a href="booking.html" class="nav__cta" data-no="Book" data-en="Book" data-de="Buchen">Book</a>
     </nav>
-    <button class="lang" id="langToggle" type="button" aria-label="Bytt språk">
+    <button class="lang" id="langToggle" type="button" aria-label="Språk / Language / Sprache">
       <span class="lang__opt is-active" data-lang="no">NO</span>
       <span class="lang__sep">/</span>
       <span class="lang__opt" data-lang="en">EN</span>
+      <span class="lang__sep">/</span>
+      <span class="lang__opt" data-lang="de">DE</span>
     </button>
   </header>
 
@@ -36,120 +37,128 @@
   <section class="hero" id="hjem">
     <div class="hero__media" aria-hidden="true"></div>
     <div class="hero__inner">
-      <p class="hero__kicker" data-no="Selvær · Træna · Helgeland" data-en="Selvær · Træna · Northern Norway">Selvær · Træna · Helgeland</p>
+      <p class="hero__kicker" data-no="Selvær · Træna · Helgeland" data-en="Selvær · Træna · Northern Norway" data-de="Selvær · Træna · Nordnorwegen">Selvær · Træna · Helgeland</p>
       <h1 class="hero__title"
           data-no="Havfiske ytterst&nbsp;mot storhavet"
-          data-en="Deep-sea fishing at the&nbsp;edge of the open sea">Havfiske ytterst&nbsp;mot storhavet</h1>
+          data-en="Deep-sea fishing at the&nbsp;edge of the open sea"
+          data-de="Hochseeangeln am&nbsp;Rand des offenen Meeres">Havfiske ytterst&nbsp;mot storhavet</h1>
       <p class="hero__lead"
          data-no="Moderne leiligheter på kaikanten, egne båter og noen av landets beste fiskeplasser rett utenfor stuedøra."
-         data-en="Modern apartments on the quay, your own boat, and some of Norway's best fishing grounds right outside the door.">Moderne leiligheter på kaikanten, egne båter og noen av landets beste fiskeplasser rett utenfor stuedøra.</p>
+         data-en="Modern apartments on the quay, your own boat, and some of Norway's best fishing grounds right outside the door."
+         data-de="Moderne Wohnungen am Kai, ein eigenes Boot und einige der besten Angelplätze Norwegens direkt vor der Tür.">Moderne leiligheter på kaikanten, egne båter og noen av landets beste fiskeplasser rett utenfor stuedøra.</p>
       <div class="hero__actions">
-        <a href="#booking" class="btn btn--gold" data-no="Send forespørsel" data-en="Send an enquiry">Send forespørsel</a>
-        <a href="#fiske" class="btn btn--ghost" data-no="Se fisket" data-en="The fishing">Se fisket</a>
+        <a href="booking.html" class="btn btn--gold" data-no="Book din reise" data-en="Book your trip" data-de="Reise buchen">Book din reise</a>
+        <a href="fiske.html" class="btn btn--ghost" data-no="Se fisket" data-en="The fishing" data-de="Zum Angeln">Se fisket</a>
       </div>
     </div>
-    <a href="#opphold" class="hero__scroll" aria-label="Bla ned">
-      <span></span>
-    </a>
+    <a href="#leiligheter" class="hero__scroll" aria-label="Bla ned"><span></span></a>
   </section>
 
-  <!-- ============ INTRO STRIP ============ -->
+  <!-- ============ STRIP ============ -->
   <section class="strip">
     <div class="strip__item">
       <span class="strip__num">6</span>
-      <span class="strip__label" data-no="leiligheter på kaia" data-en="apartments on the quay">leiligheter på kaia</span>
+      <span class="strip__label" data-no="leiligheter på kaia" data-en="apartments on the quay" data-de="Wohnungen am Kai">leiligheter på kaia</span>
     </div>
     <div class="strip__item">
-      <span class="strip__num">20–24'</span>
-      <span class="strip__label" data-no="aluminiumsbåter, 90–150 hk" data-en="aluminium boats, 90–150 hp">aluminiumsbåter, 90–150 hk</span>
+      <span class="strip__num">8</span>
+      <span class="strip__label" data-no="båter, 115–150 hk" data-en="boats, 115–150 hp" data-de="Boote, 115–150 PS">båter, 115–150 hk</span>
     </div>
     <div class="strip__item">
       <span class="strip__num">∞</span>
-      <span class="strip__label" data-no="holmer, skjær og fugleliv" data-en="islets, skerries and birdlife">holmer, skjær og fugleliv</span>
+      <span class="strip__label" data-no="holmer, skjær og fugleliv" data-en="islets, skerries and birdlife" data-de="Inseln, Schären und Vögel">holmer, skjær og fugleliv</span>
     </div>
   </section>
 
-  <!-- ============ STAY ============ -->
-  <section class="section" id="opphold">
+  <!-- ============ APARTMENTS TEASER ============ -->
+  <section class="section" id="leiligheter">
     <div class="section__head">
-      <p class="eyebrow" data-no="Opphold" data-en="Stay">Opphold</p>
-      <h2 data-no="Bo rett ved båten" data-en="Sleep steps from the boat">Bo rett ved båten</h2>
+      <p class="eyebrow" data-no="Leiligheter" data-en="Apartments" data-de="Wohnungen">Leiligheter</p>
+      <h2 data-no="Bo rett ved båten" data-en="Sleep steps from the boat" data-de="Wohnen direkt am Boot">Bo rett ved båten</h2>
     </div>
     <div class="split">
       <div class="split__text">
         <p data-no="Seks moderne leiligheter ligger på rekke langs kaia. Hver er på 75–85 m² med tre soverom, fullt utstyrt kjøkken, gratis wifi og Bluetooth-lyd. Du går rett fra frokostbordet og ned i båten."
-           data-en="Six modern apartments line the quay. Each is 75–85 m² with three bedrooms, a fully equipped kitchen, free wi-fi and a Bluetooth sound system. Step from the breakfast table straight down into the boat.">Seks moderne leiligheter ligger på rekke langs kaia. Hver er på 75–85 m² med tre soverom, fullt utstyrt kjøkken, gratis wifi og Bluetooth-lyd. Du går rett fra frokostbordet og ned i båten.</p>
+           data-en="Six modern apartments line the quay. Each is 75–85 m² with three bedrooms, a fully equipped kitchen, free wi-fi and a Bluetooth sound system. Step from the breakfast table straight down into the boat."
+           data-de="Sechs moderne Wohnungen reihen sich am Kai. Jede ist 75–85 m² groß, mit drei Schlafzimmern, voll ausgestatteter Küche, kostenlosem WLAN und Bluetooth-Anlage. Vom Frühstückstisch geht es direkt ins Boot.">Seks moderne leiligheter ligger på rekke langs kaia. Hver er på 75–85 m² med tre soverom, fullt utstyrt kjøkken, gratis wifi og Bluetooth-lyd. Du går rett fra frokostbordet og ned i båten.</p>
         <ul class="ticks">
-          <li data-no="75–85 m², tre soverom" data-en="75–85 m², three bedrooms">75–85 m², tre soverom</li>
-          <li data-no="Fullt utstyrt kjøkken" data-en="Fully equipped kitchen">Fullt utstyrt kjøkken</li>
-          <li data-no="Gratis wifi og Bluetooth-lyd" data-en="Free wi-fi and Bluetooth sound">Gratis wifi og Bluetooth-lyd</li>
-          <li data-no="Rett på kaikanten" data-en="Right on the waterfront">Rett på kaikanten</li>
+          <li data-no="75–85 m², tre soverom" data-en="75–85 m², three bedrooms" data-de="75–85 m², drei Schlafzimmer">75–85 m², tre soverom</li>
+          <li data-no="Fullt utstyrt kjøkken" data-en="Fully equipped kitchen" data-de="Voll ausgestattete Küche">Fullt utstyrt kjøkken</li>
+          <li data-no="Gratis wifi og Bluetooth-lyd" data-en="Free wi-fi and Bluetooth sound" data-de="Kostenloses WLAN und Bluetooth-Anlage">Gratis wifi og Bluetooth-lyd</li>
+          <li data-no="Rett på kaikanten" data-en="Right on the waterfront" data-de="Direkt am Wasser">Rett på kaikanten</li>
         </ul>
+        <a href="facilities.html" class="textlink" data-no="Se alle leilighetene →" data-en="See all apartments →" data-de="Alle Wohnungen ansehen →">Se alle leilighetene →</a>
       </div>
       <figure class="split__media" data-img="leiligheter" role="img"
               aria-label="Leilighetene på kaia, sett fra luften"></figure>
     </div>
   </section>
 
-  <!-- ============ BOATS ============ -->
+  <!-- ============ BOATS TEASER ============ -->
   <section class="section section--alt" id="bater">
     <div class="section__head">
-      <p class="eyebrow" data-no="Båter" data-en="Boats">Båter</p>
-      <h2 data-no="Bygget for havet" data-en="Built for the open sea">Bygget for havet</h2>
+      <p class="eyebrow" data-no="Båter" data-en="Boats" data-de="Boote">Båter</p>
+      <h2 data-no="Bygget for havet" data-en="Built for the open sea" data-de="Gebaut für die See">Bygget for havet</h2>
     </div>
     <div class="split split--reverse">
       <div class="split__text">
-        <p data-no="Lei en stødig aluminiumsbåt på 20–24 fot med 90–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene."
-           data-en="Rent a sturdy 20–24 foot aluminium boat with a 90–150 horsepower engine — well suited to deep-water fishing out toward the open sea. Set your own pace: work the skerries close in, or head out to the real honey holes.">Lei en stødig aluminiumsbåt på 20–24 fot med 90–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene.</p>
+        <p data-no="Velg blant åtte stødige aluminiumsbåter på 22–24 fot med 115–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene."
+           data-en="Choose from eight sturdy 22–24 foot aluminium boats with 115–150 horsepower engines — well suited to deep-water fishing out toward the open sea. Set your own pace: work the skerries close in, or head out to the real honey holes."
+           data-de="Wählen Sie aus acht robusten Aluminiumbooten von 22–24 Fuß mit 115–150 PS — bestens geeignet fürs Tiefseeangeln draußen am offenen Meer. Sie bestimmen das Tempo: ruhig entlang der Schären oder hinaus zu den wirklich guten Plätzen.">Velg blant åtte stødige aluminiumsbåter på 22–24 fot med 115–150 hesters motor — godt egnet for dypvannsfiske ute mot storhavet. Du bestemmer farten: fisk rolig langs holmene, eller sett kursen utover mot de virkelig gode plassene.</p>
         <ul class="ticks">
-          <li data-no="20–24 fots aluminiumsbåter" data-en="20–24 foot aluminium boats">20–24 fots aluminiumsbåter</li>
-          <li data-no="90–150 hk påhengsmotor" data-en="90–150 hp engine">90–150 hk påhengsmotor</li>
-          <li data-no="Egnet for havfiske" data-en="Made for sea fishing">Egnet for havfiske</li>
+          <li data-no="8 aluminiumsbåter, 22–24 fot" data-en="8 aluminium boats, 22–24 foot" data-de="8 Aluminiumboote, 22–24 Fuß">8 aluminiumsbåter, 22–24 fot</li>
+          <li data-no="115–150 hk påhengsmotor" data-en="115–150 hp engine" data-de="115–150 PS Motor">115–150 hk påhengsmotor</li>
+          <li data-no="Ekkolodd og GPS-plotter" data-en="Echo sounder and GPS plotter" data-de="Echolot und GPS-Plotter">Ekkolodd og GPS-plotter</li>
         </ul>
+        <a href="booking.html#bater" class="textlink" data-no="Se båtene og priser →" data-en="See the boats and prices →" data-de="Boote und Preise ansehen →">Se båtene og priser →</a>
       </div>
       <figure class="split__media" data-img="bat" role="img"
               aria-label="Utleiebåtene fortøyd ved kaia"></figure>
     </div>
   </section>
 
-  <!-- ============ FISHING ============ -->
+  <!-- ============ FISHING TEASER ============ -->
   <section class="section" id="fiske">
     <div class="section__head">
-      <p class="eyebrow" data-no="Fiske" data-en="Fishing">Fiske</p>
-      <h2 data-no="Plassene de andre drar langt for" data-en="The grounds others travel far to reach">Plassene de andre drar langt for</h2>
+      <p class="eyebrow" data-no="Fiske" data-en="Fishing" data-de="Angeln">Fiske</p>
+      <h2 data-no="Plassene de andre drar langt for" data-en="The grounds others travel far to reach" data-de="Reviere, für die andere weit reisen">Plassene de andre drar langt for</h2>
       <p class="section__lead"
          data-no="Fisk fra kaia, eller dra ut på dypet. Noen av Norges beste fiskeplasser ligger i havet ved Myken, en kort tur unna. Vanlig fangst er torsk, sei, hyse og kveite."
-         data-en="Fish from the quay, or head out to deep water. Some of Norway's best fishing grounds lie in the sea by Myken, a short run away. A typical catch is cod, saithe, haddock and halibut.">Fisk fra kaia, eller dra ut på dypet. Noen av Norges beste fiskeplasser ligger i havet ved Myken, en kort tur unna. Vanlig fangst er torsk, sei, hyse og kveite.</p>
+         data-en="Fish from the quay, or head out to deep water. Some of Norway's best fishing grounds lie in the sea by Myken, a short run away. A typical catch is cod, saithe, haddock and halibut."
+         data-de="Angeln Sie vom Kai oder fahren Sie hinaus in die Tiefe. Einige der besten Angelgründe Norwegens liegen im Meer bei Myken, nur eine kurze Fahrt entfernt. Üblicher Fang: Dorsch, Seelachs, Schellfisch und Heilbutt.">Fisk fra kaia, eller dra ut på dypet. Noen av Norges beste fiskeplasser ligger i havet ved Myken, en kort tur unna. Vanlig fangst er torsk, sei, hyse og kveite.</p>
     </div>
     <div class="cards">
       <article class="card">
         <div class="card__img" style="background-image:url('images/fish-torsk.jpg')" role="img" aria-label="Torsk"></div>
         <div class="card__body">
-          <h3 data-no="Torsk" data-en="Cod">Torsk</h3>
-          <p data-no="Tung vinter- og vårtorsk når skreien står langs kysten." data-en="Heavy winter and spring cod when the skrei runs along the coast.">Tung vinter- og vårtorsk når skreien står langs kysten.</p>
+          <h3 data-no="Torsk" data-en="Cod" data-de="Dorsch">Torsk</h3>
+          <p data-no="Tung vinter- og vårtorsk når skreien står langs kysten." data-en="Heavy winter and spring cod when the skrei runs along the coast." data-de="Schwerer Winter- und Frühjahrsdorsch, wenn der Skrei entlang der Küste zieht.">Tung vinter- og vårtorsk når skreien står langs kysten.</p>
         </div>
       </article>
       <article class="card">
         <div class="card__img" style="background-image:url('images/fish-sei.jpg')" role="img" aria-label="Sei"></div>
         <div class="card__body">
-          <h3 data-no="Sei" data-en="Saithe">Sei</h3>
-          <p data-no="Hardtkjempende sei i stim — moro på lett bruk." data-en="Hard-fighting saithe in shoals — a blast on light tackle.">Hardtkjempende sei i stim — moro på lett bruk.</p>
+          <h3 data-no="Sei" data-en="Saithe" data-de="Seelachs">Sei</h3>
+          <p data-no="Hardtkjempende sei i stim — moro på lett bruk." data-en="Hard-fighting saithe in shoals — a blast on light tackle." data-de="Kampfstarker Seelachs im Schwarm — ein Spaß an leichtem Gerät.">Hardtkjempende sei i stim — moro på lett bruk.</p>
         </div>
       </article>
       <article class="card">
         <div class="card__img" style="background-image:url('images/fish-kveite.jpg')" role="img" aria-label="Kveite"></div>
         <div class="card__body">
-          <h3 data-no="Kveite" data-en="Halibut">Kveite</h3>
-          <p data-no="Drømmefisken. Store flak gjemmer seg på de rette grunnene." data-en="The dream fish. Big flatfish hold on the right banks.">Drømmefisken. Store flak gjemmer seg på de rette grunnene.</p>
+          <h3 data-no="Kveite" data-en="Halibut" data-de="Heilbutt">Kveite</h3>
+          <p data-no="Drømmefisken. Store flak gjemmer seg på de rette grunnene." data-en="The dream fish. Big flatfish hold on the right banks." data-de="Der Traumfisch. Große Plattfische stehen auf den richtigen Bänken.">Drømmefisken. Store flak gjemmer seg på de rette grunnene.</p>
         </div>
       </article>
       <article class="card">
         <div class="card__img" style="background-image:url('images/fish-uer.jpg')" role="img" aria-label="Uer"></div>
         <div class="card__body">
-          <h3 data-no="Hyse &amp; uer" data-en="Haddock &amp; redfish">Hyse &amp; uer</h3>
-          <p data-no="Solid matfisk for grytene — og garantert noe på kroken." data-en="Solid table fish for the pot — and a near-certain bite.">Solid matfisk for grytene — og garantert noe på kroken.</p>
+          <h3 data-no="Hyse &amp; uer" data-en="Haddock &amp; redfish" data-de="Schellfisch &amp; Rotbarsch">Hyse &amp; uer</h3>
+          <p data-no="Solid matfisk for grytene — og garantert noe på kroken." data-en="Solid table fish for the pot — and a near-certain bite." data-de="Solide Speisefische für den Topf — und fast garantiert ein Biss.">Solid matfisk for grytene — og garantert noe på kroken.</p>
         </div>
       </article>
+    </div>
+    <div class="section__cta">
+      <a href="fiske.html" class="btn btn--ghost" data-no="Se fangsten og sløyerommet →" data-en="See the catch and the cleaning room →" data-de="Fang und Schlachtraum ansehen →">Se fangsten og sløyerommet →</a>
     </div>
   </section>
 
@@ -158,23 +167,26 @@
     <div class="feature__media" data-img="selvar" role="img"
          aria-label="Selvær og holmene rundt, sett fra luften"></div>
     <div class="feature__panel">
-      <p class="eyebrow" data-no="Stedet" data-en="The place">Stedet</p>
-      <h2 data-no="Et fiskevær mot åpent hav" data-en="A fishing village facing the open sea">Et fiskevær mot åpent hav</h2>
+      <p class="eyebrow" data-no="Stedet" data-en="The place" data-de="Der Ort">Stedet</p>
+      <h2 data-no="Et fiskevær mot åpent hav" data-en="A fishing village facing the open sea" data-de="Ein Fischerdorf am offenen Meer">Et fiskevær mot åpent hav</h2>
       <p data-no="Selvær er den nest største øya i Træna-arkipelet, langt ute på Helgelandskysten. Som resten av Træna vender alt her mot storhavet. Tusenvis av holmer og skjær, yrende fugleliv, og lyse netter som varer til langt på sommeren."
-         data-en="Selvær is the second-largest island in the Træna archipelago, far out on the Helgeland coast. Like the rest of Træna, everything here faces the open sea. Thousands of islets and skerries, teeming birdlife, and bright nights that linger deep into summer.">Selvær er den nest største øya i Træna-arkipelet, langt ute på Helgelandskysten. Som resten av Træna vender alt her mot storhavet. Tusenvis av holmer og skjær, yrende fugleliv, og lyse netter som varer til langt på sommeren.</p>
-      <p data-no="På øya finnes dagligvarebutikk og en liten selvbetjent kafé. Resten er ro, sjø og himmel."
-         data-en="The island has a grocery store and a small self-service café. The rest is quiet, sea and sky.">På øya finnes dagligvarebutikk og en liten selvbetjent kafé. Resten er ro, sjø og himmel.</p>
+         data-en="Selvær is the second-largest island in the Træna archipelago, far out on the Helgeland coast. Like the rest of Træna, everything here faces the open sea. Thousands of islets and skerries, teeming birdlife, and bright nights that linger deep into summer."
+         data-de="Selvær ist die zweitgrößte Insel des Træna-Archipels, weit draußen an der Helgeland-Küste. Wie ganz Træna ist hier alles dem offenen Meer zugewandt. Tausende Inseln und Schären, reiches Vogelleben und helle Nächte bis tief in den Sommer.">Selvær er den nest største øya i Træna-arkipelet, langt ute på Helgelandskysten. Som resten av Træna vender alt her mot storhavet. Tusenvis av holmer og skjær, yrende fugleliv, og lyse netter som varer til langt på sommeren.</p>
+      <p data-no="På øya finnes dagligvarebutikk og en liten selvbetjent kafé. Du kan ta bil med på ferja alle dager unntatt lørdag. Resten er ro, sjø og himmel."
+         data-en="The island has a grocery store and a small self-service café. You can bring a car on the ferry every day except Saturday. The rest is quiet, sea and sky."
+         data-de="Auf der Insel gibt es einen Lebensmittelladen und ein kleines Selbstbedienungscafé. Sie können das Auto an allen Tagen außer samstags auf die Fähre mitnehmen. Der Rest ist Ruhe, Meer und Himmel.">På øya finnes dagligvarebutikk og en liten selvbetjent kafé. Du kan ta bil med på ferja alle dager unntatt lørdag. Resten er ro, sjø og himmel.</p>
     </div>
   </section>
 
   <!-- ============ BOOKING / ENQUIRY ============ -->
   <section class="section section--alt" id="booking">
     <div class="section__head">
-      <p class="eyebrow" data-no="Forespørsel" data-en="Enquiry">Forespørsel</p>
-      <h2 data-no="Planlegg turen din" data-en="Plan your trip">Planlegg turen din</h2>
+      <p class="eyebrow" data-no="Forespørsel" data-en="Enquiry" data-de="Anfrage">Forespørsel</p>
+      <h2 data-no="Planlegg turen din" data-en="Plan your trip" data-de="Planen Sie Ihre Reise">Planlegg turen din</h2>
       <p class="section__lead"
          data-no="Fortell oss når dere vil komme og hvor mange dere er, så finner vi en ledig leilighet og båt til dere. Vi svarer så fort vi kan."
-         data-en="Tell us when you'd like to come and how many you are — we'll match you with a free apartment and boat. We reply as soon as we can.">Fortell oss når dere vil komme og hvor mange dere er, så finner vi en ledig leilighet og båt til dere. Vi svarer så fort vi kan.</p>
+         data-en="Tell us when you'd like to come and how many you are — we'll match you with an available apartment and boat. We reply as soon as we can."
+         data-de="Sagen Sie uns, wann Sie kommen möchten und wie viele Sie sind — wir finden eine freie Wohnung und ein Boot für Sie. Wir antworten so schnell wie möglich.">Fortell oss når dere vil komme og hvor mange dere er, så finner vi en ledig leilighet og båt til dere. Vi svarer så fort vi kan.</p>
     </div>
 
     <div class="book-direct">
@@ -182,43 +194,43 @@
          href="https://www.dintur.no/no/feriehus/traena-arctic-fishing/"
          data-no-href="https://www.dintur.no/no/feriehus/traena-arctic-fishing/"
          data-en-href="https://www.dintur.no/en/feriehus/traena-arctic-fishing/"
+         data-de-href="https://www.dintur.no/de/feriehus/traena-arctic-fishing/"
          target="_blank" rel="noopener"
-         data-no="Book din reise her"
-         data-en="Book your trip here">Book din reise her</a>
-      <p class="book-direct__or" data-no="— eller send oss en forespørsel direkte —" data-en="— or send us an enquiry directly —">— eller send oss en forespørsel direkte —</p>
+         data-no="Book din reise her" data-en="Book your trip here" data-de="Buchen Sie hier">Book din reise her</a>
+      <p class="book-direct__or" data-no="— eller send oss en forespørsel direkte —" data-en="— or send us an enquiry directly —" data-de="— oder senden Sie uns direkt eine Anfrage —">— eller send oss en forespørsel direkte —</p>
     </div>
 
     <form class="form" id="enquiryForm">
       <div class="form__row">
         <label class="field">
-          <span data-no="Navn" data-en="Name">Navn</span>
+          <span data-no="Navn" data-en="Name" data-de="Name">Navn</span>
           <input type="text" name="navn" required />
         </label>
         <label class="field">
-          <span data-no="E-post" data-en="Email">E-post</span>
+          <span data-no="E-post" data-en="Email" data-de="E-Mail">E-post</span>
           <input type="email" name="epost" required />
         </label>
       </div>
       <div class="form__row">
         <label class="field">
-          <span data-no="Fra dato" data-en="From date">Fra dato</span>
+          <span data-no="Fra dato" data-en="From date" data-de="Von Datum">Fra dato</span>
           <input type="date" name="fra" />
         </label>
         <label class="field">
-          <span data-no="Til dato" data-en="To date">Til dato</span>
+          <span data-no="Til dato" data-en="To date" data-de="Bis Datum">Til dato</span>
           <input type="date" name="til" />
         </label>
         <label class="field field--narrow">
-          <span data-no="Antall" data-en="Guests">Antall</span>
+          <span data-no="Antall" data-en="Guests" data-de="Personen">Antall</span>
           <input type="number" name="antall" min="1" max="40" />
         </label>
       </div>
       <label class="field">
-        <span data-no="Melding" data-en="Message">Melding</span>
-        <textarea name="melding" rows="4" data-no-ph="Hva har dere lyst til å oppleve?" data-en-ph="What are you hoping to experience?" placeholder="Hva har dere lyst til å oppleve?"></textarea>
+        <span data-no="Melding" data-en="Message" data-de="Nachricht">Melding</span>
+        <textarea name="melding" rows="4" data-no-ph="Hva har dere lyst til å oppleve?" data-en-ph="What are you hoping to experience?" data-de-ph="Was möchten Sie erleben?" placeholder="Hva har dere lyst til å oppleve?"></textarea>
       </label>
-      <button type="submit" class="btn btn--gold" data-no="Send forespørsel" data-en="Send enquiry">Send forespørsel</button>
-      <p class="form__note" data-no="Ved å sende åpner vi e-postprogrammet ditt med forespørselen klar." data-en="Sending opens your email app with the enquiry ready to go.">Ved å sende åpner vi e-postprogrammet ditt med forespørselen klar.</p>
+      <button type="submit" class="btn btn--gold" data-no="Send forespørsel" data-en="Send enquiry" data-de="Anfrage senden">Send forespørsel</button>
+      <p class="form__note" data-no="Ved å sende åpner vi e-postprogrammet ditt med forespørselen klar." data-en="Sending opens your email app with the enquiry ready to go." data-de="Beim Senden öffnet sich Ihr E-Mail-Programm mit der fertigen Anfrage.">Ved å sende åpner vi e-postprogrammet ditt med forespørselen klar.</p>
     </form>
   </section>
 
@@ -226,11 +238,11 @@
   <footer class="footer">
     <div class="footer__brand">
       <span class="nav__mark">TAF</span>
-      <p>Træna Arctic Fishing<br /><span data-no="Selvær, 8770 Træna" data-en="Selvær, 8770 Træna, Norway">Selvær, 8770 Træna</span></p>
+      <p>Træna Arctic Fishing<br /><span>8742 Selvær, Træna</span></p>
     </div>
     <div class="footer__contact">
-      <a href="mailto:post@traenaarcticfishing.no">post@traenaarcticfishing.no</a>
-      <a href="#booking" data-no="Send forespørsel" data-en="Send an enquiry">Send forespørsel</a>
+      <a href="mailto:traenaarctic@gmail.com">traenaarctic@gmail.com</a>
+      <a href="tel:+4797524099">+47 975 24 099</a>
       <div class="footer__social">
         <a href="https://www.instagram.com/traenaarcticfishing/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.facebook.com/trenaarcticfishing/" target="_blank" rel="noopener">Facebook</a>

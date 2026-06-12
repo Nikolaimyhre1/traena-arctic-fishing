@@ -1,5 +1,6 @@
-# Full-res originals from DinTur — kept locally for re-cropping, not deployed
+# Source photo libraries — kept locally for re-cropping, not deployed
 _originals/
+_brochure/
 
 # macOS
 .DS_Store

@@ -302,6 +302,110 @@ img { max-width: 100%; display: block; }
   .footer__social { justify-content: flex-start; }
 }
 
+/* ---------- sub-page nav ---------- */
+.nav--solid { background: rgba(7,23,31,.85); backdrop-filter: blur(8px); }
+.nav__links a.is-current { color: var(--gold); }
+.nav__links a.nav__cta.is-current { background: var(--gold); color: var(--ink) !important; }
+
+/* ---------- page hero (sub-pages) ---------- */
+.pagehero {
+  min-height: 56vh; display: flex; align-items: flex-end;
+  padding: 8rem var(--pad) 3.5rem;
+  background-size: cover; background-position: center;
+}
+.pagehero__inner { max-width: var(--maxw); margin: 0 auto; width: 100%; }
+.pagehero h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); margin: .4rem 0 1rem; }
+.pagehero__lead { font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(243,246,245,.88); max-width: 620px; }
+.pagehero .btn { margin-top: 1.8rem; }
+
+/* ---------- photo grid (facilities) ---------- */
+.photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+.photo { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--ocean); }
+.photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.photo figcaption { padding: .9rem 1.1rem; font-size: .92rem; color: rgba(243,246,245,.8); }
+@media (max-width: 700px) { .photo-grid { grid-template-columns: 1fr; } }
+
+/* ---------- catch gallery (masonry) ---------- */
+.catch-grid { columns: 3; column-gap: 1.1rem; }
+.catch-grid img { width: 100%; margin-bottom: 1.1rem; border-radius: var(--radius); display: block; break-inside: avoid; }
+@media (max-width: 900px) { .catch-grid { columns: 2; } }
+@media (max-width: 520px) { .catch-grid { columns: 1; } }
+
+/* ---------- apartment name grid ---------- */
+.namegrid {
+  list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 2.4rem;
+}
+.namegrid li { display: flex; align-items: center; gap: .8rem; padding: 1rem 1.2rem;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); }
+.namegrid__no { display: grid; place-items: center; width: 2rem; height: 2rem; flex: none;
+  border: 1.5px solid var(--gold); color: var(--gold); border-radius: 50%; font-size: .9rem; }
+@media (max-width: 760px) { .namegrid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .namegrid { grid-template-columns: 1fr; } }
+
+/* ---------- amenity chips ---------- */
+.amenities { display: flex; flex-wrap: wrap; gap: .7rem; }
+.amenity { background: var(--sea); color: var(--foam); font-size: .9rem;
+  padding: .5rem 1rem; border-radius: 999px; }
+
+/* ---------- units (apartment cards) ---------- */
+.units { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.unit { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius); overflow: hidden; transition: transform .2s, border-color .2s; }
+.unit:hover { transform: translateY(-4px); border-color: rgba(231,177,105,.5); }
+.unit__img { aspect-ratio: 3 / 2; background-size: cover; background-position: center; }
+.unit__body { padding: 1.2rem 1.3rem 1.4rem; }
+.unit__body h3 { font-size: 1.35rem; margin-bottom: .35rem; }
+.unit__meta { font-size: .9rem; color: var(--slate); margin-bottom: .7rem; }
+.unit__price { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold-soft); }
+.unit__price .from { font-family: var(--font-body); font-size: .8rem; color: var(--slate); margin-right: .3rem; text-transform: lowercase; }
+@media (max-width: 900px) { .units { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .units { grid-template-columns: 1fr; } }
+
+/* ---------- boat cards ---------- */
+.boatgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.4rem; }
+.boatcard { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius); padding: 1.3rem 1.2rem; text-align: left; }
+.boatcard h3 { font-size: 1.2rem; margin-bottom: .3rem; }
+.boatcard__spec { font-size: .88rem; color: var(--slate); margin-bottom: .8rem; }
+@media (max-width: 820px) { .boatgrid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .boatgrid { grid-template-columns: 1fr; } }
+
+/* ---------- full-width image band ---------- */
+.imgband { height: clamp(220px, 38vw, 420px); border-radius: var(--radius);
+  background-size: cover; background-position: center; margin: 0; }
+
+/* ---------- section CTA ---------- */
+.section__cta { margin-top: 2.6rem; text-align: center; }
+.section__cta--wide { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; }
+.section__cta--wide h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); }
+
+/* ---------- text link ---------- */
+.textlink { display: inline-block; margin-top: 1.4rem; color: var(--gold);
+  font-weight: 600; font-size: .98rem; transition: gap .2s; }
+.textlink:hover { color: var(--gold-soft); }
+
+/* ---------- feature reverse + placeholder ---------- */
+.feature--reverse .feature__panel { order: 2; }
+.feature--reverse .feature__media { order: 1; }
+.feature__media--placeholder { background: repeating-linear-gradient(45deg, var(--ocean), var(--ocean) 18px, #0c2a38 18px, #0c2a38 36px); }
+@media (max-width: 820px) {
+  .feature--reverse .feature__panel { order: 0; }
+  .feature--reverse .feature__media { order: 0; }
+}
+
+/* ---------- select (booking form) ---------- */
+.field select {
+  font-family: var(--font-body); font-size: 1rem; color: var(--foam);
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14);
+  border-radius: 10px; padding: .8rem .95rem; cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238aa3a8' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right .95rem center;
+}
+.field select:focus { outline: none; border-color: var(--gold); background-color: rgba(255,255,255,.08); }
+.field select option { background: var(--ocean); color: var(--foam); }
+
 /* ---------- reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-in { opacity: 1; transform: none; }

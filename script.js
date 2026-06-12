@@ -10,7 +10,7 @@
   var langToggle = document.getElementById("langToggle");
 
   function applyLang(lang) {
-    document.documentElement.lang = lang === "en" ? "en" : "no";
+    document.documentElement.lang = lang;
 
     // swap text content
     document.querySelectorAll("[data-no][data-en]").forEach(function (el) {
@@ -38,17 +38,29 @@
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
   }
 
+  var LANGS = ["no", "en", "de"];
+
   function currentLang() {
     try {
       var saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) return saved;
+      if (saved && LANGS.indexOf(saved) !== -1) return saved;
     } catch (e) {}
-    return (navigator.language || "no").toLowerCase().indexOf("en") === 0 ? "en" : "no";
+    var nav = (navigator.language || "no").toLowerCase();
+    if (nav.indexOf("de") === 0) return "de";
+    if (nav.indexOf("en") === 0) return "en";
+    return "no";
   }
 
-  langToggle.addEventListener("click", function () {
-    var next = document.documentElement.lang === "en" ? "no" : "en";
-    applyLang(next);
+  // Click a specific NO / EN / DE pill to select it; clicking elsewhere cycles.
+  langToggle.addEventListener("click", function (e) {
+    var opt = e.target.closest(".lang__opt");
+    if (opt && opt.getAttribute("data-lang")) {
+      applyLang(opt.getAttribute("data-lang"));
+      return;
+    }
+    var cur = document.documentElement.lang;
+    var idx = LANGS.indexOf(cur);
+    applyLang(LANGS[(idx + 1) % LANGS.length]);
   });
 
   applyLang(currentLang());
@@ -81,36 +93,39 @@
 
   // ---- Enquiry form -> opens mail client (no backend needed) ----
   var form = document.getElementById("enquiryForm");
-  var MAIL_TO = "post@traenaarcticfishing.no"; // TODO: bytt til riktig e-post
+  var MAIL_TO = "traenaarctic@gmail.com";
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var data = new FormData(form);
-    var en = document.documentElement.lang === "en";
+    var lang = document.documentElement.lang;
 
-    var subject = en
-      ? "Enquiry — Træna Arctic Fishing"
-      : "Forespørsel — Træna Arctic Fishing";
+    var L = {
+      no: { subj: "Forespørsel — Træna Arctic Fishing", navn: "Navn", epost: "E-post", fra: "Fra", til: "Til", antall: "Antall" },
+      en: { subj: "Enquiry — Træna Arctic Fishing", navn: "Name", epost: "Email", fra: "From", til: "To", antall: "Guests" },
+      de: { subj: "Anfrage — Træna Arctic Fishing", navn: "Name", epost: "E-Mail", fra: "Von", til: "Bis", antall: "Personen" }
+    };
+    var t = L[lang] || L.no;
 
-    var lines = en
-      ? [
-          "Name: " + (data.get("navn") || ""),
-          "Email: " + (data.get("epost") || ""),
-          "From: " + (data.get("fra") || ""),
-          "To: " + (data.get("til") || ""),
-          "Guests: " + (data.get("antall") || ""),
-          "",
-          data.get("melding") || ""
-        ]
-      : [
-          "Navn: " + (data.get("navn") || ""),
-          "E-post: " + (data.get("epost") || ""),
-          "Fra: " + (data.get("fra") || ""),
-          "Til: " + (data.get("til") || ""),
-          "Antall: " + (data.get("antall") || ""),
-          "",
-          data.get("melding") || ""
-        ];
+    var subject = t.subj;
+    var lines = [
+      t.navn + ": " + (data.get("navn") || ""),
+      t.epost + ": " + (data.get("epost") || ""),
+      t.fra + ": " + (data.get("fra") || ""),
+      t.til + ": " + (data.get("til") || ""),
+      t.antall + ": " + (data.get("antall") || "")
+    ];
+    // booking page adds apartment/boat selectors
+    var labels = {
+      no: { leilighet: "Leilighet", bat: "Båt" },
+      en: { leilighet: "Apartment", bat: "Boat" },
+      de: { leilighet: "Wohnung", bat: "Boot" }
+    };
+    var bl = labels[lang] || labels.no;
+    if (data.get("leilighet")) lines.push(bl.leilighet + ": " + data.get("leilighet"));
+    if (data.get("bat")) lines.push(bl.bat + ": " + data.get("bat"));
+    lines.push("");
+    lines.push(data.get("melding") || "");
 
     var href =
       "mailto:" + MAIL_TO +

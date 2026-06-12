@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiske — Træna Arctic Fishing</title>
+  <meta name="description" content="Fangstbilder fra Selvær — torsk, sei, kveite og uer — og sløyerommet på kaia. Noen av Norges beste fiskeplasser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav nav--solid" id="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__mark">TAF</span>
+      <span class="nav__name">Træna Arctic Fishing</span>
+    </a>
+    <nav class="nav__links">
+      <a href="facilities.html" data-no="Leiligheter" data-en="Apartments" data-de="Wohnungen">Leiligheter</a>
+      <a href="fiske.html" class="is-current" data-no="Fiske" data-en="Fishing" data-de="Angeln">Fiske</a>
+      <a href="index.html#selvar" data-no="Selvær" data-en="Selvær" data-de="Selvær">Selvær</a>
+      <a href="booking.html" class="nav__cta" data-no="Book" data-en="Book" data-de="Buchen">Book</a>
+    </nav>
+    <button class="lang" id="langToggle" type="button" aria-label="Språk / Language / Sprache">
+      <span class="lang__opt is-active" data-lang="no">NO</span>
+      <span class="lang__sep">/</span>
+      <span class="lang__opt" data-lang="en">EN</span>
+      <span class="lang__sep">/</span>
+      <span class="lang__opt" data-lang="de">DE</span>
+    </button>
+  </header>
+
+  <section class="pagehero" style="background-image:linear-gradient(180deg,rgba(7,23,31,.30),rgba(7,23,31,.72)),url('images/hero.jpg')">
+    <div class="pagehero__inner">
+      <p class="eyebrow" data-no="Fiske" data-en="Fishing" data-de="Angeln">Fiske</p>
+      <h1 data-no="Fangsten taler for seg" data-en="The catch speaks for itself" data-de="Der Fang spricht für sich">Fangsten taler for seg</h1>
+      <p class="pagehero__lead"
+         data-no="Torsk, sei, kveite og uer — fra holmene rett utenfor til de dype bankene ved Myken."
+         data-en="Cod, saithe, halibut and redfish — from the skerries just outside to the deep banks by Myken."
+         data-de="Dorsch, Seelachs, Heilbutt und Rotbarsch — von den Schären direkt vor der Tür bis zu den tiefen Bänken bei Myken.">Torsk, sei, kveite og uer — fra holmene rett utenfor til de dype bankene ved Myken.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <p class="eyebrow" data-no="Galleri" data-en="Gallery" data-de="Galerie">Galleri</p>
+      <h2 data-no="Fra våre gjester" data-en="From our guests" data-de="Von unseren Gästen">Fra våre gjester</h2>
+      <p class="section__lead"
+         data-no="Et utvalg fangst fra sesongene på Selvær. Husk å ta vare på kveitebestanden — fin å ta med en av, men sett de største ut igjen."
+         data-en="A selection of catches from the seasons on Selvær. Please look after the halibut stock — nice to keep one, but release the biggest ones."
+         data-de="Eine Auswahl an Fängen aus den Saisons auf Selvær. Bitte schonen Sie den Heilbutt-Bestand — einen mitzunehmen ist schön, aber setzen Sie die größten wieder aus.">Et utvalg fangst fra sesongene på Selvær. Husk å ta vare på kveitebestanden — fin å ta med en av, men sett de største ut igjen.</p>
+    </div>
+
+    <div class="catch-grid">
+      <img src="images/catch1.jpg" alt="Torsk" loading="lazy" />
+      <img src="images/catch2.jpg" alt="Sei" loading="lazy" />
+      <img src="images/catch3.jpg" alt="Kveite" loading="lazy" />
+      <img src="images/catch4.jpg" alt="Uer" loading="lazy" />
+      <img src="images/catch5.jpg" alt="Kveite" loading="lazy" />
+      <img src="images/catch6.jpg" alt="Kveite" loading="lazy" />
+      <img src="images/catch7.jpg" alt="Uer" loading="lazy" />
+      <img src="images/catch8.jpg" alt="Sei" loading="lazy" />
+      <img src="images/catch9.jpg" alt="Torsk" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ============ GUTTING ROOM ============ -->
+  <section class="feature feature--reverse" id="sloyerom">
+    <div class="feature__panel">
+      <p class="eyebrow" data-no="Sløyerommet" data-en="The cleaning room" data-de="Der Schlachtraum">Sløyerommet</p>
+      <h2 data-no="Gjør i stand fangsten på kaia" data-en="Prepare your catch on the quay" data-de="Verarbeiten Sie den Fang am Kai">Gjør i stand fangsten på kaia</h2>
+      <p data-no="Rett ved leilighetene ligger sløyerommet. Her sløyer og fileterer du dagens fangst med rennende vann og god plass, og fryser ned det du vil ta med hjem. Alt på ett sted — fra båt til fryser på noen få steg."
+         data-en="Right by the apartments is the cleaning room. Here you gut and fillet the day's catch with running water and plenty of space, and freeze what you want to take home. All in one place — from boat to freezer in a few steps."
+         data-de="Direkt bei den Wohnungen liegt der Schlachtraum. Hier nehmen Sie den Tagesfang aus und filetieren ihn mit fließendem Wasser und viel Platz und frieren ein, was Sie mit nach Hause nehmen möchten. Alles an einem Ort — vom Boot zur Tiefkühltruhe in wenigen Schritten.">Rett ved leilighetene ligger sløyerommet. Her sløyer og fileterer du dagens fangst med rennende vann og god plass, og fryser ned det du vil ta med hjem. Alt på ett sted — fra båt til fryser på noen få steg.</p>
+    </div>
+    <div class="feature__media feature__media--placeholder">
+      <span class="ph ph--light" data-no="Bilde av sløyerommet kommer" data-en="Photo of the cleaning room coming" data-de="Foto vom Schlachtraum folgt">Bilde av sløyerommet kommer</span>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="section__cta section__cta--wide">
+      <h2 data-no="Klar for din egen fangst?" data-en="Ready for your own catch?" data-de="Bereit für Ihren eigenen Fang?">Klar for din egen fangst?</h2>
+      <a href="booking.html" class="btn btn--gold" data-no="Book din reise" data-en="Book your trip" data-de="Reise buchen">Book din reise</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="nav__mark">TAF</span>
+      <p>Træna Arctic Fishing<br /><span>8742 Selvær, Træna</span></p>
+    </div>
+    <div class="footer__contact">
+      <a href="mailto:traenaarctic@gmail.com">traenaarctic@gmail.com</a>
+      <a href="tel:+4797524099">+47 975 24 099</a>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/traenaarcticfishing/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/trenaarcticfishing/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="footer__legal">© <span id="year"></span> Træna Arctic Fishing</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
