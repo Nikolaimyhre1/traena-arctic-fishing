@@ -1,15 +1,22 @@
 # Træna Arctic Fishing — nettside
 
-Tospråklig (norsk/engelsk) statisk nettside for fiskecampen på Selvær i Træna.
+Tre-språklig (norsk/engelsk/tysk) statisk nettside for fiskecampen på Selvær i Træna.
 
-Ingen rammeverk, ingen byggesteg — tre filer. Det gjør den billig å hoste og lett å vedlikeholde.
+Ingen rammeverk, ingen byggesteg. Det gjør den billig å hoste og lett å vedlikeholde.
 
 ```
-index.html   — innholdet og strukturen
-styles.css   — designet (farger, layout)
-script.js    — språkbytte, meny, kontaktskjema
-images/      — legg bildene her
+index.html        — forsiden
+facilities.html   — leilighetene (interiør, fasiliteter)
+fiske.html        — fangstgalleri + sløyerommet
+booking.html      — 6 leiligheter m/pris + 8 båter, og forespørselsskjema
+styles.css        — designet (farger, layout)
+script.js         — språkbytte (NO/EN/DE), meny, skjema
+images/           — bildene som vises på siden
 ```
+
+Språkvelgeren (NO/EN/DE oppe til høyre) bytter all tekst. Hvert flerspråklige element har tre attributter: `data-no`, `data-en`, `data-de`.
+
+**Mangler bilde:** `fiske.html` har en plassholder for sløyerommet («Bilde kommer») — legg `images/sloyerom.jpg` inn og bytt plassholderen når dere har et bilde.
 
 ## Se siden lokalt
 
