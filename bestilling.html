@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestill — Træna Arctic Fishing</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav nav--solid" id="nav">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__mark">TAF</span>
+      <span class="nav__name">Træna Arctic Fishing</span>
+    </a>
+    <nav class="nav__links">
+      <a href="facilities.html" data-no="Fasiliteter" data-en="Facilities" data-de="Ausstattung">Fasiliteter</a>
+      <a href="fiske.html" data-no="Fiske" data-en="Fishing" data-de="Angeln">Fiske</a>
+      <a href="index.html#selvar" data-no="Selvær" data-en="Selvær" data-de="Selvær">Selvær</a>
+      <a href="bestilling.html" class="nav__cta is-current" data-no="Bestill" data-en="Book" data-de="Buchen">Bestill</a>
+    </nav>
+    <button class="lang" id="langToggle" type="button" aria-label="Språk / Language / Sprache">
+      <span class="lang__opt is-active" data-lang="no">NO</span>
+      <span class="lang__sep">/</span>
+      <span class="lang__opt" data-lang="en">EN</span>
+      <span class="lang__sep">/</span>
+      <span class="lang__opt" data-lang="de">DE</span>
+    </button>
+  </header>
+
+  <section class="pagehero" style="background-image:linear-gradient(180deg,rgba(7,23,31,.4),rgba(7,23,31,.82)),url('images/boat-fleet.jpg')">
+    <div class="pagehero__inner">
+      <p class="eyebrow" data-no="Bestill" data-en="Book" data-de="Buchen">Bestill</p>
+      <h1 data-no="Sjekk ledighet og bestill" data-en="Check availability and book" data-de="Verfügbarkeit prüfen und buchen">Sjekk ledighet og bestill</h1>
+      <p class="pagehero__lead"
+         data-no="Velg leilighet eller båt og datoer, så ser du med en gang om det er ledig."
+         data-en="Pick an apartment or boat and your dates to see availability instantly."
+         data-de="Wählen Sie Wohnung oder Boot und Ihre Daten — die Verfügbarkeit sehen Sie sofort.">Velg leilighet eller båt og datoer, så ser du med en gang om det er ledig.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <form class="form" id="bookingForm" autocomplete="on">
+      <div class="form__row">
+        <label class="field">
+          <span data-no="Hva vil du leie?" data-en="What would you like to rent?" data-de="Was möchten Sie mieten?">Hva vil du leie?</span>
+          <select name="unit" id="unitSelect" required></select>
+        </label>
+        <label class="field field--narrow">
+          <span data-no="Antall gjester" data-en="Guests" data-de="Personen">Antall gjester</span>
+          <input type="number" name="guests" min="1" max="40" />
+        </label>
+      </div>
+      <div class="form__row">
+        <label class="field">
+          <span data-no="Fra dato" data-en="From date" data-de="Von Datum">Fra dato</span>
+          <input type="date" name="from" id="fromDate" required />
+        </label>
+        <label class="field">
+          <span data-no="Til dato" data-en="To date" data-de="Bis Datum">Til dato</span>
+          <input type="date" name="to" id="toDate" required />
+        </label>
+        <button type="button" class="btn btn--ghost" id="checkBtn" data-no="Sjekk ledighet" data-en="Check availability" data-de="Verfügbarkeit prüfen">Sjekk ledighet</button>
+      </div>
+
+      <div id="availMsg" class="avail" hidden></div>
+
+      <div class="form__row">
+        <label class="field">
+          <span data-no="Navn" data-en="Name" data-de="Name">Navn</span>
+          <input type="text" name="name" required />
+        </label>
+        <label class="field">
+          <span data-no="E-post" data-en="Email" data-de="E-Mail">E-post</span>
+          <input type="email" name="email" required />
+        </label>
+        <label class="field">
+          <span data-no="Telefon" data-en="Phone" data-de="Telefon">Telefon</span>
+          <input type="tel" name="phone" />
+        </label>
+      </div>
+      <label class="field">
+        <span data-no="Melding" data-en="Message" data-de="Nachricht">Melding</span>
+        <textarea name="message" rows="3" data-no-ph="Noe vi bør vite?" data-en-ph="Anything we should know?" data-de-ph="Etwas, das wir wissen sollten?" placeholder="Noe vi bør vite?"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn--gold" id="submitBtn" data-no="Send bestilling" data-en="Send booking" data-de="Buchung senden">Send bestilling</button>
+      <p class="form__note" id="payNote" data-no="Neste steg blir betaling (Stripe/Vipps) — kobles på når campens betalingskonto er klar. Inntil da registreres bestillingen og campen tar kontakt." data-en="Payment (Stripe/Vipps) is the next step — wired up once the camp's payment account is ready. Until then the booking is registered and the camp gets in touch." data-de="Die Zahlung (Stripe/Vipps) folgt als nächster Schritt — sobald das Zahlungskonto des Camps bereit ist. Bis dahin wird die Buchung registriert und das Camp meldet sich.">Neste steg blir betaling (Stripe/Vipps) — kobles på når campens betalingskonto er klar. Inntil da registreres bestillingen og campen tar kontakt.</p>
+    </form>
+
+    <div id="confirmBox" class="confirm" hidden></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="nav__mark">TAF</span>
+      <p>Træna Arctic Fishing<br /><span>8742 Selvær, Træna</span></p>
+    </div>
+    <div class="footer__contact">
+      <a href="mailto:traenaarctic@gmail.com">traenaarctic@gmail.com</a>
+      <a href="tel:+4790846461">+47 908 46 461</a>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/traenaarcticfishing/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/trenaarcticfishing/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="footer__legal">© <span id="year"></span> Træna Arctic Fishing</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  // ---- Booking backend wiring ----
+  // Local prototype runs against localhost:8787. When the backend is hosted,
+  // replace the production URL below with its public address.
+  (function () {
+    "use strict";
+    var API_BASE = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+      ? "http://localhost:8787"
+      : "https://REPLACE-WITH-YOUR-BACKEND.example";
+
+    var T = {
+      no: { avail:"Ledig! 🎉", taken:"Dessverre opptatt i denne perioden.", pick:"Velg enhet og gyldige datoer først.",
+            sent:"Takk! Bestillingen er registrert. Campen tar kontakt.", err:"Noe gikk galt. Prøv igjen.",
+            apt:"Leiligheter", boat:"Båter", checking:"Sjekker…" },
+      en: { avail:"Available! 🎉", taken:"Sorry, taken for these dates.", pick:"Pick a unit and valid dates first.",
+            sent:"Thank you! Your booking is registered. The camp will be in touch.", err:"Something went wrong. Try again.",
+            apt:"Apartments", boat:"Boats", checking:"Checking…" },
+      de: { avail:"Verfügbar! 🎉", taken:"Leider belegt in diesem Zeitraum.", pick:"Erst Einheit und gültige Daten wählen.",
+            sent:"Danke! Ihre Buchung ist registriert. Das Camp meldet sich.", err:"Etwas ist schiefgelaufen. Bitte erneut.",
+            apt:"Wohnungen", boat:"Boote", checking:"Prüfe…" }
+    };
+    function tr() { return T[document.documentElement.lang] || T.no; }
+
+    var unitSel = document.getElementById("unitSelect");
+    var availMsg = document.getElementById("availMsg");
+    var form = document.getElementById("bookingForm");
+
+    // Populate units from the backend (grouped apartments / boats)
+    fetch(API_BASE + "/api/units").then(function (r) { return r.json(); }).then(function (units) {
+      var groups = { apartment: [], boat: [] };
+      units.forEach(function (u) { (groups[u.kind] || (groups[u.kind] = [])).push(u); });
+      function optgroup(label, list) {
+        if (!list.length) return "";
+        return "<optgroup label='" + label + "'>" +
+          list.map(function (u) { return "<option value='" + u.slug + "'>" + u.name + "</option>"; }).join("") +
+          "</optgroup>";
+      }
+      unitSel.innerHTML = optgroup(tr().apt, groups.apartment) + optgroup(tr().boat, groups.boat);
+    }).catch(function () {
+      unitSel.innerHTML = "<option value=''>—</option>";
+    });
+
+    function show(el, html, cls) { el.hidden = false; el.className = "avail " + (cls || ""); el.innerHTML = html; }
+
+    document.getElementById("checkBtn").addEventListener("click", function () {
+      var unit = unitSel.value, frm = document.getElementById("fromDate").value, to = document.getElementById("toDate").value;
+      if (!unit || !frm || !to || to <= frm) return show(availMsg, tr().pick, "warn");
+      show(availMsg, tr().checking, "");
+      fetch(API_BASE + "/api/availability?unit=" + unit + "&from=" + frm + "&to=" + to)
+        .then(function (r) { return r.json(); })
+        .then(function (d) { show(availMsg, d.available ? tr().avail : tr().taken, d.available ? "ok" : "no"); })
+        .catch(function () { show(availMsg, tr().err, "no"); });
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = new FormData(form);
+      var body = { unit: f.get("unit"), from: f.get("from"), to: f.get("to"), guests: f.get("guests"),
+                   name: f.get("name"), email: f.get("email"), phone: f.get("phone"), message: f.get("message") };
+      var btn = document.getElementById("submitBtn"); btn.disabled = true;
+      fetch(API_BASE + "/api/bookings", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          btn.disabled = false;
+          if (res.ok) {
+            form.hidden = true;
+            var box = document.getElementById("confirmBox");
+            box.hidden = false; box.innerHTML = "<h2>✅ " + tr().sent + "</h2>";
+          } else {
+            show(availMsg, res.d && res.d.error === "opptatt" ? tr().taken : tr().err, "no");
+          }
+        }).catch(function () { btn.disabled = false; show(availMsg, tr().err, "no"); });
+    });
+  })();
+  </script>
+</body>
+</html>
