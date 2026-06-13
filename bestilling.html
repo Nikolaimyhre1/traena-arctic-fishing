@@ -125,15 +125,16 @@
     var T = {
       no: { avail:"Ledig! 🎉", taken:"Dessverre opptatt i denne perioden.", pick:"Velg enhet og gyldige datoer først.",
             sent:"Takk! Bestillingen er registrert. Campen tar kontakt.", err:"Noe gikk galt. Prøv igjen.",
-            apt:"Leiligheter", boat:"Båter", checking:"Sjekker…" },
+            apt:"Leiligheter", boat:"Båter", checking:"Sjekker…", est:"Estimert", nights:"netter", veil:"(veiledende)" },
       en: { avail:"Available! 🎉", taken:"Sorry, taken for these dates.", pick:"Pick a unit and valid dates first.",
             sent:"Thank you! Your booking is registered. The camp will be in touch.", err:"Something went wrong. Try again.",
-            apt:"Apartments", boat:"Boats", checking:"Checking…" },
+            apt:"Apartments", boat:"Boats", checking:"Checking…", est:"Estimate", nights:"nights", veil:"(indicative)" },
       de: { avail:"Verfügbar! 🎉", taken:"Leider belegt in diesem Zeitraum.", pick:"Erst Einheit und gültige Daten wählen.",
             sent:"Danke! Ihre Buchung ist registriert. Das Camp meldet sich.", err:"Etwas ist schiefgelaufen. Bitte erneut.",
-            apt:"Wohnungen", boat:"Boote", checking:"Prüfe…" }
+            apt:"Wohnungen", boat:"Boote", checking:"Prüfe…", est:"Schätzung", nights:"Nächte", veil:"(unverbindlich)" }
     };
     function tr() { return T[document.documentElement.lang] || T.no; }
+    function nok(n) { return "kr " + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
 
     var unitSel = document.getElementById("unitSelect");
     var availMsg = document.getElementById("availMsg");
@@ -162,7 +163,14 @@
       show(availMsg, tr().checking, "");
       fetch(API_BASE + "/api/availability?unit=" + unit + "&from=" + frm + "&to=" + to)
         .then(function (r) { return r.json(); })
-        .then(function (d) { show(availMsg, d.available ? tr().avail : tr().taken, d.available ? "ok" : "no"); })
+        .then(function (d) {
+          if (d.available) {
+            var msg = tr().avail;
+            if (d.price) msg += " &nbsp;·&nbsp; " + tr().est + " " + nok(d.price) +
+              " (" + d.nights + " " + tr().nights + ") " + tr().veil;
+            show(availMsg, msg, "ok");
+          } else { show(availMsg, tr().taken, "no"); }
+        })
         .catch(function () { show(availMsg, tr().err, "no"); });
     });
 
