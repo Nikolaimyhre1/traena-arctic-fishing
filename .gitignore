@@ -2,11 +2,7 @@
 _originals/
 _brochure/
 _dintur/
+_dintur2/
 
 # macOS
 .DS_Store
-_dintur2/
-
-# booking prototype DB (do not commit)
-booking-app/*.db
-.vercel
