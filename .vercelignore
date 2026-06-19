@@ -1,0 +1,11 @@
+# Python booking backend prototype — cannot run on Vercel static hosting,
+# needs its own always-on host (Render/Railway/Fly). Kept in repo, not deployed.
+booking-app/
+
+# Booking prototype that talks to the backend above. noindex + unlinked from the
+# public site; excluded so the live site only ships the working static pages.
+bestilling.html
+
+# Docs / agent scratch — no need to ship
+README.md
+.context/
