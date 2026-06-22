@@ -85,10 +85,10 @@ Rediger `data-no` (norsk) og `data-en` (engelsk). Teksten mellom taggene vises f
 
 - **E-post:** `traenaarctic@gmail.com` (bekreftet offentlig — Visit Helgeland/Visit
   Norway). Ligger i alle footere og i `script.js` (`MAIL_TO`).
-- **Telefon:** `+47 908 46 461` står på siden, men offentlige kilder viser
-  `+47 916 30 174`. **Bekreft hvilket som er riktig** før live.
-- **Org.nr:** `Træna Rorbuferie AS, 928 965 953` lagt inn på `personvern.html`
-  (lovpålagt). Bekreft at det er riktig selskap.
+- **Telefon:** `+47 908 46 461` (bekreftet — campens nummer). 916-nummeret i
+  offentlige kilder er et privat nummer som ikke skal brukes.
+- **Org.nr:** Drives av **Helgeland Adventure AS, org.nr 989 945 262** (bekreftet i
+  Brønnøysundregistrene, samme adresse). Vises på `personvern.html` (lovpålagt).
 
 ## Kontaktskjema
 

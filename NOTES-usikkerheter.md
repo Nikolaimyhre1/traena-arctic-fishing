@@ -1,37 +1,26 @@
-# Avgjørelser jeg tok på egen hånd — rangert etter usikkerhet
+# Avgjørelser — status
 
-Du var ikke tilgjengelig, så jeg brukte beste skjønn og noterte alt her.
-Rangert **mest usikker øverst**. Punkt 1 og 2 bør du sjekke før du går helt live;
-resten er trygt, men greit å vite om.
+Begge de to viktige usikkerhetene er nå **avklart av deg** (✅). Resten er småvalg
+jeg tok med beste skjønn, greit å vite om.
 
 ---
 
-## 🔴 1. Telefonnummeret (mest usikker — sjekk dette)
+## ✅ 1. Telefonnummeret — AVKLART
 
-- **Hva siden viser:** `+47 908 46 461` (lå der fra før, i bunnteksten på alle sider).
-- **Hva research fant:** ALLE offentlige oppføringer (Visit Helgeland, Visit Norway,
-  DinTur, 180.no for Yngve Myhre) viser **+47 916 30 174**. Nummeret 908 46 461
-  finnes ikke i noen offentlig kilde.
-- **Hva jeg gjorde:** Jeg **beholdt nummeret som allerede sto på siden** (908 46 461),
-  fordi det kan være et nyere/privat nummer du selv la inn — jeg ville ikke overstyre
-  uten å vite.
-- **Du gjør:** Bekreft hvilket som er riktig. Skal det byttes, finnes det to steder
-  per side: visningsteksten og `tel:`-lenken (`tel:+4790846461`). Søk etter `90846461`
-  i alle `.html`-filene. Si fra, så fikser jeg det på sekunder.
-- **Hvorfor det er øverst:** Feil telefonnummer = tapte henvendelser/bookinger.
+- **Riktig:** `+47 908 46 461` — campens nummer. Står på siden, ingen endring nødvendig.
+- 916-nummeret som dukket opp i offentlige kilder er et **privat nummer (din far)** og
+  skal **ikke** brukes. Lar det være som det er.
 
-## 🔴 2. Organisasjonsnummer / juridisk selskap
+## ✅ 2. Organisasjonsnummer / selskap — AVKLART
 
-- **Funn:** «Træna Arctic Fishing» er et **merkenavn**, ikke et registrert selskap.
-  Mest sannsynlige driftsselskap: **Træna Rorbuferie AS, org.nr 928 965 953**
-  (Yngve Myhre er styreleder; bransjekode 55.200 «ferieleiligheter»; stiftet 2022).
-- **Hva jeg gjorde:** La inn dette på **personvern-siden** (norsk lov,
-  foretaksregisterloven §10-2, krever at org.nr + foretaksnavn vises på nettsiden).
-  Det er markert med en `TODO VERIFY`-kommentar i `personvern.html`.
-- **Du gjør:** Bekreft at Træna Rorbuferie AS / 928 965 953 er riktig selskap. Er det
-  feil, gi meg riktig navn + org.nr. Dette **bestemmer også** om du registrerer
-  domenet på selskapet eller som privatperson (se PUBLISER.md steg 1).
-- **Hvorfor høyt:** Det er en juridisk opplysning som vises offentlig.
+- **Riktig:** Campen «Træna Arctic Fishing» drives av **Helgeland Adventure AS,
+  org.nr 989 945 262** (bekreftet i Brønnøysundregistrene — samme adresse,
+  Stongveien 68, 8742 Selvær, bransjekode 55.200 ferieleiligheter, aktiv).
+- «Træna Rorbuferie AS» (min tidligere gjetning) var **feil** — det er en annen
+  fiskecamp på naboøya. Nå rettet.
+- Lagt inn på `personvern.html` (lovpålagt, foretaksregisterloven §10-2).
+- For domeneregistrering (PUBLISER.md steg 1): registrer gjerne `.no`-domenet på
+  **Helgeland Adventure AS / 989 945 262**.
 
 ## 🟠 3. Domenenavn = `traenaarcticfishing.no`
 
@@ -96,8 +85,5 @@ resten er trygt, men greit å vite om.
 ---
 
 ### Kort oppsummert hva du må gjøre
-1. Bekreft **telefonnummer** (punkt 1).
-2. Bekreft **selskap/org.nr** (punkt 2).
-3. Følg **PUBLISER.md**.
-
-Alt annet er klart til å gå live.
+Begge fakta er avklart og lagt inn. **Følg `PUBLISER.md`** for å gå live —
+registrer domenet på Helgeland Adventure AS (989 945 262).

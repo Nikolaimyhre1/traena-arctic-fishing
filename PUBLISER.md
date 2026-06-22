@@ -11,20 +11,14 @@ Rekkefølge: **0) Sjekk to ting → 1) Domene → 2) Legg siden på nett → 3) 
 
 ---
 
-## 0) Sjekk to ting før du starter (5 min) — VIKTIG
+## 0) Bekreftet og klart
 
-Jeg fant to opplysninger jeg ikke kunne bekrefte 100 %. Se `NOTES-usikkerheter.md`
-for detaljer. Kort versjon:
+To opplysninger er nå bekreftet og lagt inn (du avklarte dem):
 
-1. **Telefonnummeret.** Siden viser **+47 908 46 461**, men alle offentlige
-   oppføringer (Visit Helgeland, Visit Norway, DinTur) viser **+47 916 30 174**.
-   → **Bekreft hvilket som er riktig.** Skal det endres, si fra, eller bytt det selv:
-   det står i bunnteksten på alle sidene (søk etter `90846461`).
-2. **Organisasjonsnummer.** «Træna Arctic Fishing» er et merkenavn, ikke et eget
-   selskap. Jeg har lagt inn **Træna Rorbuferie AS, org.nr 928 965 953** på
-   personvern-siden (loven krever at org.nr vises på nettsiden). Det stemmer
-   sannsynligvis, men **bekreft at det er riktig selskap** før du går live.
-   Org.nr bestemmer også hvordan du registrerer domenet (steg 1).
+1. **Telefon:** `+47 908 46 461` — campens nummer. ✅
+2. **Selskap:** Campen «Træna Arctic Fishing» drives av **Helgeland Adventure AS,
+   org.nr 989 945 262** (vises på personvern-siden, som loven krever). Bruk dette
+   selskapet når du registrerer domenet i steg 1. ✅
 
 Resten er klart til bruk.
 
@@ -35,9 +29,9 @@ Resten er klart til bruk.
 **Anbefalt navn:** `traenaarcticfishing.no`
 
 **Hvem kan registrere et .no-domene?**
-- **Har bedriften organisasjonsnummer** (f.eks. Træna Rorbuferie AS): registrer
-  domenet **på selskapet** med org.nr. Dette er det ryddigste — domenet eies da av
-  bedriften, ikke en privatperson.
+- **På selskapet (anbefalt):** registrer domenet på **Helgeland Adventure AS
+  (org.nr 989 945 262)**. Dette er det ryddigste — domenet eies da av bedriften,
+  ikke en privatperson.
 - **Som privatperson** går det også: du må være 18+ og bosatt i Norge, og du lager
   først en gratis «Personlig ID» (PID) på <https://pid.norid.no>. Da slipper du å
   gi fødselsnummeret ditt til domeneselskapet.
