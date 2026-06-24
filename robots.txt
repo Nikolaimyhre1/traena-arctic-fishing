@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://traenaarcticfishing.no/sitemap.xml

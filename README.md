@@ -8,15 +8,24 @@ Ingen rammeverk, ingen byggesteg. Det gjør den billig å hoste og lett å vedli
 index.html        — forsiden
 facilities.html   — leilighetene (interiør, fasiliteter)
 fiske.html        — fangstgalleri + sløyerommet
-booking.html      — 6 leiligheter m/pris + 8 båter, og forespørselsskjema
-styles.css        — designet (farger, layout)
-script.js         — språkbytte (NO/EN/DE), meny, skjema
+booking.html      — 6 leiligheter m/pris + 8 båter, DinTur-knapp + forespørselsskjema
+personvern.html   — personvernerklæring (NO/EN/DE)
+styles.css        — designet + selv-hostede skrifttyper (@font-face øverst)
+script.js         — språkbytte (NO/EN/DE), valuta, meny, skjema
+fonts/            — Fraunces + Inter (lastet ned fra Google, servert lokalt = GDPR-rent)
 images/           — bildene som vises på siden
+vercel.json       — sikkerhets-headere + pene adresser (Vercel)
+_headers          — samme sikkerhets-headere for Cloudflare Pages / Netlify
 ```
 
-Språkvelgeren (NO/EN/DE oppe til høyre) bytter all tekst. Hvert flerspråklige element har tre attributter: `data-no`, `data-en`, `data-de`.
+**Booking:** Siden selger ingenting selv. Gjester booker via **DinTur**-knappen
+eller sender en **forespørsel-e-post** (mailto, ingen server). Ingen betaling,
+ingen admin, ingen backend.
 
-**Mangler bilde:** `fiske.html` har en plassholder for sløyerommet («Bilde kommer») — legg `images/sloyerom.jpg` inn og bytt plassholderen når dere har et bilde.
+**Publisering:** se **`PUBLISER.md`** (steg-for-steg) og **`NOTES-usikkerheter.md`**
+(ting som bør bekreftes før live).
+
+Språkvelgeren (NO/EN/DE oppe til høyre) bytter all tekst. Hvert flerspråklige element har tre attributter: `data-no`, `data-en`, `data-de`.
 
 ## Se siden lokalt
 
@@ -72,32 +81,31 @@ Rediger `data-no` (norsk) og `data-en` (engelsk). Teksten mellom taggene vises f
    }
    ```
 
-## Ting som må fylles inn (placeholders)
+## Ting som bør bekreftes (se NOTES-usikkerheter.md)
 
-Søk i koden etter `TODO` og disse:
-
-- **E-post (viktigst):** `post@traenaarcticfishing.no` står i `index.html` (footer) og i `script.js` (`MAIL_TO`). Jeg fant ikke campens egen e-post, så denne er en gjetning — bekreft eller bytt til riktig adresse, ellers forsvinner forespørslene fra skjemaet.
-- **Telefon:** ikke lagt inn (fant ikke et nummer). Vil dere ha telefon i footeren, legg til en `<a href="tel:+47…">`-lenke ved siden av e-posten i `index.html`.
-- **Adresse/postnummer:** sjekk «Selvær, 8770 Træna» i footeren.
+- **E-post:** `traenaarctic@gmail.com` (bekreftet offentlig — Visit Helgeland/Visit
+  Norway). Ligger i alle footere og i `script.js` (`MAIL_TO`).
+- **Telefon:** `+47 908 46 461` (bekreftet — campens nummer). 916-nummeret i
+  offentlige kilder er et privat nummer som ikke skal brukes.
+- **Org.nr:** Drives av **Helgeland Adventure AS, org.nr 989 945 262** (bekreftet i
+  Brønnøysundregistrene, samme adresse). Vises på `personvern.html` (lovpålagt).
 
 ## Kontaktskjema
 
 Skjemaet åpner gjestens eget e-postprogram med forespørselen ferdig utfylt (`mailto:`). Det krever ingen server og virker overalt.
 
-Vil dere heller få forespørslene rett i innboksen uten at gjesten må ha e-postprogram satt opp, bytt til en gratis skjematjeneste:
+Vil dere heller få forespørslene rett i innboksen uten at gjesten må ha e-postprogram satt opp, kan en gratis skjematjeneste kobles på senere (f.eks. [Formspree](https://formspree.io)). Da må CSP-en i `vercel.json`/`_headers` utvides med tjenestens domene under `form-action`/`connect-src`.
 
-- [Formspree](https://formspree.io) eller [Netlify Forms](https://docs.netlify.com/forms/setup/) — lim inn et endepunkt, ferdig.
+## Legg siden på nett
 
-## Legg siden på nett (gratis)
+Se **`PUBLISER.md`** for full steg-for-steg. Kort: koble GitHub-repoet til
+**Vercel** (allerede satt opp via `vercel.json`), koble på domenet
+`traenaarcticfishing.no`, slå på 2FA på alle kontoer, og meld siden inn til Google
+Search Console.
 
-Alle tre fungerer med ren statisk side:
+## Personvern & sikkerhet
 
-- **Netlify:** dra mappa inn på <https://app.netlify.com/drop> — live på sekunder.
-- **Vercel:** `vercel` i mappa, eller koble et GitHub-repo.
-- **GitHub Pages:** push til et repo, slå på Pages.
-
-Eget domene (f.eks. `traenaarcticfishing.no`) kobles på under «Domains» hos den du velger.
-
-## Senere: ekte booking
-
-Nå er booking forespørselsbasert. Vil dere ha kalender med ledige uker og betaling, kobler vi på et bookingsystem (Beds24, Lodgify, eller lenker til Airbnb/Booking.com). Det er et eget steg — si fra når dere er klare.
+- Ingen sporing/analyse → **ingen cookie-banner nødvendig**. Personvernerklæring
+  ligger i `personvern.html` (NO/EN/DE).
+- Skrifttyper er **selv-hostet** (`fonts/`) så ingen IP deles med Google.
+- Sikkerhets-headere (CSP, HSTS, m.m.) i `vercel.json` (+ `_headers` for andre verter).
