@@ -8,7 +8,7 @@ Ingen rammeverk, ingen byggesteg. Det gjør den billig å hoste og lett å vedli
 index.html        — forsiden
 facilities.html   — leilighetene (interiør, fasiliteter)
 fiske.html        — fangstgalleri + sløyerommet
-booking.html      — 6 leiligheter m/pris + 7 båter, DinTur-knapp + forespørselsskjema
+booking.html      — 6 leiligheter m/pris + 8 båter, DinTur-knapp + forespørselsskjema
 personvern.html   — personvernerklæring (NO/EN/DE)
 styles.css        — designet + selv-hostede skrifttyper (@font-face øverst)
 script.js         — språkbytte (NO/EN/DE), valuta, meny, skjema
