@@ -24,29 +24,34 @@ Resten er klart til bruk.
 
 ---
 
-## 1) Registrer domenet (.no)
+## 1) Registrer domenene (.com + .no)
 
-**Anbefalt navn:** `traenaarcticfishing.no`
+**Hovedadresse:** `traenaarcticfishing.com` — campen har flest utenlandske gjester,
+og `.com` er det de fleste forventer.
+**I tillegg:** `traenaarcticfishing.no` — som videresender til `.com` (fanger opp
+norske gjester og beskytter navnet). Du kan greit nøye deg med kun `.com` hvis du
+vil, men begge anbefales.
 
-**Hvem kan registrere et .no-domene?**
-- **På selskapet (anbefalt):** registrer domenet på **Helgeland Adventure AS
-  (org.nr 989 945 262)**. Dette er det ryddigste — domenet eies da av bedriften,
-  ikke en privatperson.
-- **Som privatperson** går det også: du må være 18+ og bosatt i Norge, og du lager
-  først en gratis «Personlig ID» (PID) på <https://pid.norid.no>. Da slipper du å
-  gi fødselsnummeret ditt til domeneselskapet.
+**.com — ingen norske krav:**
+- Hvem som helst kan registrere et `.com`. Registrer det gjerne på **Helgeland
+  Adventure AS**. Koster ca. **100–150 kr/år**.
+
+**.no — egne regler:**
+- **På selskapet (anbefalt):** registrer på **Helgeland Adventure AS
+  (org.nr 989 945 262)** — domenet eies da av bedriften.
+- **Som privatperson** går det også: du må være 18+ og bosatt i Norge, og lager
+  først en gratis «Personlig ID» (PID) på <https://pid.norid.no>.
 
 **Slik gjør du:**
-1. Gå til en norsk domeneforhandler. **Anbefalt: Domeneshop** (<https://domene.shop>).
-   Alternativer: One.com, Domene.no.
-2. Søk opp `traenaarcticfishing.no` og se at det er ledig.
-3. Legg det i handlekurven og fullfør (ca. **kr 99 første år, kr 199/år** etterpå).
-   - Velger du org.nr-registrering: oppgi organisasjonsnummeret.
-   - Velger du privat: oppgi PID-en fra pid.norid.no.
-4. **Slå på DNSSEC** hvis du ser valget (ett klikk — gir ekstra beskyttelse mot
-   at domenet kapres). Kan også gjøres senere.
+1. Gå til en domeneforhandler — **Domeneshop** (<https://domene.shop>) tar både
+   `.com` og `.no`, så du har alt på ett sted. (Alt.: One.com, Namecheap, Cloudflare.)
+2. Søk opp `traenaarcticfishing.com` **og** `traenaarcticfishing.no` og se at de er ledige.
+3. Legg begge i handlekurven og fullfør (`.com` ~100–150 kr/år, `.no` ~kr 99 første
+   år så kr 199/år).
+   - `.no` med org.nr: oppgi organisasjonsnummeret. Som privat: oppgi PID-en.
+4. **Slå på DNSSEC** hvis du ser valget (ett klikk — ekstra beskyttelse mot kapring).
 
-Domenet er som regel klart i løpet av **minutter til noen timer**.
+Domenene er som regel klare i løpet av **minutter til noen timer**.
 
 ---
 
@@ -71,33 +76,35 @@ raskest:
 
 ---
 
-## 3) Koble domenet til siden
+## 3) Koble domenene til siden
 
-Nå peker vi `traenaarcticfishing.no` til Vercel.
+Vi kobler **begge** domenene på samme Vercel-prosjekt, og setter `.com` som hoved
+(`.no` videresender dit).
 
 **I Vercel:**
 1. Åpne prosjektet → **Settings → Domains**.
-2. Skriv inn `traenaarcticfishing.no` → **Add**.
-3. Vercel viser nå **nøyaktig hvilke DNS-oppføringer** du skal lage. **Bruk dem som
-   står der** (de kan avvike litt fra under). Typisk:
+2. Skriv inn `traenaarcticfishing.com` → **Add**. Gjenta med `traenaarcticfishing.no`.
+3. For hvert domene viser Vercel **nøyaktig hvilke DNS-oppføringer** du skal lage.
+   **Bruk dem som står der** (de kan avvike litt fra under). Typisk:
    - **A-record** for `@` (selve domenet) → IP **`76.76.21.21`**
    - **CNAME** for `www` → **`cname.vercel-dns.com`**
-4. Vercel foreslår gjerne å la `traenaarcticfishing.no` videresende til
-   `www.traenaarcticfishing.no` (eller motsatt) — bare følg forslaget.
+4. Sett **`traenaarcticfishing.com` som «Primary Domain»** i Vercel. Da videresender
+   `.no` automatisk til `.com`. (Følg også Vercels forslag om www → uten-www e.l.)
 
-**Hos Domeneshop (DNS-innstillinger for domenet):**
+**Hos domeneforhandleren (DNS-innstillinger):**
 1. Logg inn → velg domenet → **DNS**.
-2. Legg inn de samme oppføringene som Vercel viste (A-record og CNAME over).
+2. Legg inn oppføringene Vercel viste. **Husk: gjør dette for begge domenene**
+   (`.com` og `.no`) — hvert domene har sine egne DNS-innstillinger.
 3. Lagre.
 
 **Vent.** DNS bruker vanligvis **minutter–noen timer** (opptil 48t i verste fall).
-Når det er klart, ordner Vercel **gratis HTTPS (hengelås)** helt automatisk —
-du trenger ikke gjøre noe.
+Når det er klart, ordner Vercel **gratis HTTPS (hengelås)** for begge domenene
+helt automatisk — du trenger ikke gjøre noe.
 
-> ⚠️ Hvis du valgte et **annet domenenavn** enn `traenaarcticfishing.no`: gi beskjed,
-> så endrer jeg adressen i tre småfiler (`robots.txt`, `sitemap.xml`,
-> `.well-known/security.txt`) som har domenet skrevet inn. Det er en
-> 2-minutters jobb.
+> ℹ️ Siden er allerede satt opp med `traenaarcticfishing.com` som hovedadresse
+> (i `robots.txt`, `sitemap.xml` og `.well-known/security.txt`). Lander du på et
+> **annet** navn enn dette, gi beskjed — så bytter jeg adressen i de tre filene
+> (2-minutters jobb).
 
 ---
 
@@ -130,9 +137,10 @@ du trenger ikke gjøre noe der.
 Google om å finne siden:
 
 1. Gå til **Google Search Console**: <https://search.google.com/search-console>.
-2. Legg til **domenet** `traenaarcticfishing.no` (velg «Domain»-typen).
+2. Legg til **hoveddomenet** `traenaarcticfishing.com` (velg «Domain»-typen).
+   (Du kan legge til `.no` i tillegg, men det er `.com` som skal rangere.)
 3. Google ber deg verifisere ved å legge inn en **TXT-oppføring** i DNS hos
-   Domeneshop — kopier verdien de gir deg, lim inn som TXT-record, lagre, og trykk
+   forhandleren — kopier verdien de gir deg, lim inn som TXT-record, lagre, og trykk
    verifiser.
 4. Inne i Search Console: **Sitemaps → legg til `sitemap.xml`** (den ligger allerede
    klar på siden).
