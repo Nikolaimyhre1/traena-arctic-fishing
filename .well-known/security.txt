@@ -1,4 +1,4 @@
 Contact: mailto:traenaarctic@gmail.com
-Canonical: https://traenaarcticfishing.com/.well-known/security.txt
+Canonical: https://traena-arctic-fishing.com/.well-known/security.txt
 Preferred-Languages: en, no
 Expires: 2027-12-31T23:59:59Z

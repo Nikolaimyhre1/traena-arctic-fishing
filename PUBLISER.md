@@ -26,9 +26,9 @@ Resten er klart til bruk.
 
 ## 1) Registrer domenene (.com + .no)
 
-**Hovedadresse:** `traenaarcticfishing.com` — campen har flest utenlandske gjester,
+**Hovedadresse:** `traena-arctic-fishing.com` — campen har flest utenlandske gjester,
 og `.com` er det de fleste forventer.
-**I tillegg:** `traenaarcticfishing.no` — som videresender til `.com` (fanger opp
+**I tillegg:** `traena-arctic-fishing.no` — som videresender til `.com` (fanger opp
 norske gjester og beskytter navnet). Du kan greit nøye deg med kun `.com` hvis du
 vil, men begge anbefales.
 
@@ -45,7 +45,7 @@ vil, men begge anbefales.
 **Slik gjør du:**
 1. Gå til en domeneforhandler — **Domeneshop** (<https://domene.shop>) tar både
    `.com` og `.no`, så du har alt på ett sted. (Alt.: One.com, Namecheap, Cloudflare.)
-2. Søk opp `traenaarcticfishing.com` **og** `traenaarcticfishing.no` og se at de er ledige.
+2. Søk opp `traena-arctic-fishing.com` **og** `traena-arctic-fishing.no` og se at de er ledige.
 3. Legg begge i handlekurven og fullfør (`.com` ~100–150 kr/år, `.no` ~kr 99 første
    år så kr 199/år).
    - `.no` med org.nr: oppgi organisasjonsnummeret. Som privat: oppgi PID-en.
@@ -83,12 +83,12 @@ Vi kobler **begge** domenene på samme Vercel-prosjekt, og setter `.com` som hov
 
 **I Vercel:**
 1. Åpne prosjektet → **Settings → Domains**.
-2. Skriv inn `traenaarcticfishing.com` → **Add**. Gjenta med `traenaarcticfishing.no`.
+2. Skriv inn `traena-arctic-fishing.com` → **Add**. Gjenta med `traena-arctic-fishing.no`.
 3. For hvert domene viser Vercel **nøyaktig hvilke DNS-oppføringer** du skal lage.
    **Bruk dem som står der** (de kan avvike litt fra under). Typisk:
    - **A-record** for `@` (selve domenet) → IP **`76.76.21.21`**
    - **CNAME** for `www` → **`cname.vercel-dns.com`**
-4. Sett **`traenaarcticfishing.com` som «Primary Domain»** i Vercel. Da videresender
+4. Sett **`traena-arctic-fishing.com` som «Primary Domain»** i Vercel. Da videresender
    `.no` automatisk til `.com`. (Følg også Vercels forslag om www → uten-www e.l.)
 
 **Hos domeneforhandleren (DNS-innstillinger):**
@@ -101,7 +101,7 @@ Vi kobler **begge** domenene på samme Vercel-prosjekt, og setter `.com` som hov
 Når det er klart, ordner Vercel **gratis HTTPS (hengelås)** for begge domenene
 helt automatisk — du trenger ikke gjøre noe.
 
-> ℹ️ Siden er allerede satt opp med `traenaarcticfishing.com` som hovedadresse
+> ℹ️ Siden er allerede satt opp med `traena-arctic-fishing.com` som hovedadresse
 > (i `robots.txt`, `sitemap.xml` og `.well-known/security.txt`). Lander du på et
 > **annet** navn enn dette, gi beskjed — så bytter jeg adressen i de tre filene
 > (2-minutters jobb).
@@ -137,7 +137,7 @@ du trenger ikke gjøre noe der.
 Google om å finne siden:
 
 1. Gå til **Google Search Console**: <https://search.google.com/search-console>.
-2. Legg til **hoveddomenet** `traenaarcticfishing.com` (velg «Domain»-typen).
+2. Legg til **hoveddomenet** `traena-arctic-fishing.com` (velg «Domain»-typen).
    (Du kan legge til `.no` i tillegg, men det er `.com` som skal rangere.)
 3. Google ber deg verifisere ved å legge inn en **TXT-oppføring** i DNS hos
    forhandleren — kopier verdien de gir deg, lim inn som TXT-record, lagre, og trykk
