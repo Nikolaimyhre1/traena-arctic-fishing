@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Træna Arctic Fishing">
-  <rect width="64" height="64" rx="13" fill="#07171f"/>
-  <circle cx="32" cy="27" r="11" fill="#e7b169"/>
-  <path d="M5 43 q9 -6 18 0 t18 0 q5 -3 18 0" fill="none" stroke="#2a7d96" stroke-width="4" stroke-linecap="round"/>
-  <path d="M5 53 q9 -6 18 0 t18 0 q5 -3 18 0" fill="none" stroke="#155066" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bz" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#806a4b"/>
+      <stop offset="1" stop-color="#291f14"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="url(#bz)"/>
+  <text x="256" y="274" text-anchor="middle" dominant-baseline="central"
+        font-family="Georgia, 'Times New Roman', serif" font-size="208"
+        font-weight="700" fill="#fbe4b3" letter-spacing="-2">TAF</text>
 </svg>
