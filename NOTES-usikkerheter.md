@@ -24,12 +24,12 @@ jeg tok med beste skjønn, greit å vite om.
 
 ## ✅ 3. Domene — AVKLART: `.com` som hoved, `.no` videresender
 
-- Campen har flest **utenlandske gjester**, så **`traenaarcticfishing.com`** er valgt
-  som hovedadresse, med **`traenaarcticfishing.no`** som videresender dit.
+- Campen har flest **utenlandske gjester**, så **`traena-arctic-fishing.com`** er valgt
+  som hovedadresse, med **`traena-arctic-fishing.no`** som videresender dit.
 - `.com` er skrevet inn i de tre tekniske filene (`robots.txt`, `sitemap.xml`,
   `.well-known/security.txt`). Begge domenene kobles på samme Vercel-prosjekt
   (se PUBLISER.md steg 1 + 3).
-- Lander du på et annet navn enn `traenaarcticfishing.com`, si fra — 2 min å bytte.
+- Lander du på et annet navn enn `traena-arctic-fishing.com`, si fra — 2 min å bytte.
 
 ## 🟡 4. Fjernet betaling, admin og backend (som bestilt)
 
