@@ -598,3 +598,153 @@ img { max-width: 100%; display: block; }
 .footer__legal a { color: var(--slate); text-decoration: none; }
 .footer__legal a:hover { color: var(--gold-soft); }
 .footer__legal .sep { color: var(--slate); opacity: .5; margin: 0 .5rem; }
+
+/* ============================================================
+   Bestilling: klikkbare kort (velg leilighet/båt) + oppsummering
+   ============================================================ */
+.selectable { cursor: pointer; position: relative; user-select: none; }
+.selectable:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.selectable .pick {
+  position: absolute; top: .75rem; right: .75rem; z-index: 2;
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 2px solid rgba(243,246,245,.75); background: rgba(7,23,31,.55);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .15s, border-color .15s;
+}
+.selectable .pick::after {
+  content: ""; width: 8px; height: 13px; margin-top: -3px;
+  border: solid transparent; border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+  transition: border-color .15s;
+}
+.selectable .pick-label {
+  position: absolute; top: .85rem; left: .85rem; z-index: 2;
+  font-size: .72rem; letter-spacing: .04em; text-transform: uppercase;
+  background: rgba(7,23,31,.6); color: rgba(243,246,245,.85);
+  padding: .25rem .6rem; border-radius: 20px; opacity: 0; transition: opacity .15s;
+}
+.selectable:hover .pick-label { opacity: 1; }
+.selectable.is-picked { border-color: var(--gold); box-shadow: 0 0 0 1.5px var(--gold); }
+.selectable.is-picked .pick { background: var(--gold); border-color: var(--gold); }
+.selectable.is-picked .pick::after { border-color: #14232b; }
+.selectable.is-picked .pick-label { opacity: 0; }
+
+.boatcard.selectable { padding: 0; overflow: hidden; transition: transform .2s, border-color .2s; }
+.boatcard.selectable:hover { transform: translateY(-4px); border-color: rgba(231,177,105,.5); }
+.boatcard__img { aspect-ratio: 5 / 2.6; background-size: cover; background-position: center; }
+.boatcard__body { padding: 1.1rem 1.2rem 1.2rem; }
+
+/* Din bestilling */
+.order {
+  background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius); padding: 1.5rem 1.6rem; margin-bottom: 2rem; max-width: 720px;
+}
+.order h3 { font-size: 1.25rem; margin-bottom: .9rem; }
+.order__empty { color: var(--slate); font-size: .95rem; }
+.order__list { list-style: none; padding: 0; margin: 0 0 .4rem; }
+.order__list li {
+  display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
+  padding: .5rem 0; border-bottom: 1px dashed rgba(255,255,255,.1); font-size: .95rem;
+}
+.order__list li .nm { color: var(--foam); }
+.order__list li .rm { background: none; border: 0; color: var(--slate); cursor: pointer; font-size: .8rem; text-decoration: underline; padding: 0 .2rem; }
+.order__list li .rm:hover { color: var(--gold-soft); }
+.order__list li .pr { color: var(--gold-soft); font-family: var(--font-display); white-space: nowrap; }
+.order__total {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-top: .9rem; font-family: var(--font-display); font-size: 1.25rem; color: var(--gold-soft);
+}
+.order__total .lbl { font-family: var(--font-body); font-size: .85rem; color: var(--slate); }
+.order__note { margin-top: .6rem; font-size: .8rem; color: var(--slate); line-height: 1.5; }
+
+/* ============================================================
+   Tilbudssiden (tilbud.html) — Vaskeladden-inspirert, TAF-drakt
+   ============================================================ */
+.t-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem clamp(1.2rem, 4vw, 3rem); border-bottom: 1px solid rgba(255,255,255,.09);
+}
+.t-top__meta { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--slate); }
+.t-wrap { max-width: 1060px; margin: 0 auto; padding: clamp(2.2rem, 6vw, 4.5rem) clamp(1.2rem, 4vw, 3rem) 7rem; }
+.t-hero { max-width: 640px; margin-bottom: clamp(2rem, 5vw, 3.4rem); }
+.t-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: .5rem 0 1rem; }
+.t-hero p { color: rgba(243,246,245,.8); font-size: 1.06rem; line-height: 1.65; }
+.t-grid { display: grid; grid-template-columns: 340px 1fr; gap: clamp(1.4rem, 3vw, 2.6rem); align-items: start; }
+@media (max-width: 880px) { .t-grid { grid-template-columns: 1fr; } }
+
+.t-card {
+  position: sticky; top: 1.2rem;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.11);
+  border-radius: var(--radius); overflow: hidden;
+}
+.t-card__img { aspect-ratio: 4 / 2.6; background-size: cover; background-position: center; }
+.t-card__body { padding: 1.3rem 1.4rem 1.5rem; }
+.t-card__kick { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--slate); margin-bottom: .9rem; }
+.t-card dl { margin: 0; }
+.t-card dt { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--slate); margin-top: .8rem; }
+.t-card dd { margin: .15rem 0 0; font-size: .97rem; color: var(--foam); }
+.t-card__total { border-top: 1px solid rgba(255,255,255,.12); margin-top: 1.2rem; padding-top: 1.1rem; }
+.t-card__total .lbl { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); }
+.t-card__total .sum { font-family: var(--font-display); font-size: 2rem; color: var(--gold); line-height: 1.2; }
+.t-card__total .sub { font-size: .78rem; color: var(--slate); margin-top: .2rem; }
+
+.t-sec { margin-bottom: clamp(1.8rem, 4vw, 2.8rem); }
+.t-sec h2 { font-size: clamp(1.35rem, 2.6vw, 1.8rem); margin-bottom: 1rem; }
+.t-items { display: grid; gap: .9rem; }
+.t-item {
+  display: grid; grid-template-columns: 132px 1fr auto; gap: 1rem; align-items: center;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px; overflow: hidden; min-height: 86px;
+}
+.t-item__img { height: 100%; min-height: 86px; background-size: cover; background-position: center; }
+.t-item__b h3 { font-size: 1.05rem; margin-bottom: .15rem; }
+.t-item__b p { font-size: .85rem; color: var(--slate); }
+.t-item__p { padding-right: 1.1rem; font-family: var(--font-display); color: var(--gold-soft); white-space: nowrap; }
+.t-item__p .per { font-family: var(--font-body); font-size: .75rem; color: var(--slate); }
+@media (max-width: 560px) { .t-item { grid-template-columns: 96px 1fr; } .t-item__p { grid-column: 2; padding: 0 0 .8rem; } }
+
+.t-ticks { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem 1.6rem; list-style: none; padding: 0; margin: 0; }
+@media (max-width: 640px) { .t-ticks { grid-template-columns: 1fr; } }
+.t-ticks li { position: relative; padding-left: 1.5rem; font-size: .95rem; color: rgba(243,246,245,.85); line-height: 1.55; }
+.t-ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+.t-note { font-size: .85rem; color: var(--slate); line-height: 1.6; margin-top: .9rem; }
+
+.t-faq div { border-bottom: 1px solid rgba(255,255,255,.09); padding: 1rem 0; }
+.t-faq h3 { font-size: 1rem; margin-bottom: .35rem; color: var(--foam); }
+.t-faq p { font-size: .93rem; color: rgba(243,246,245,.75); line-height: 1.6; }
+
+.t-sign { margin-top: 2.4rem; }
+.t-sign .script { font-family: var(--font-display); font-style: italic; font-size: 1.5rem; color: var(--gold-soft); margin-bottom: .3rem; }
+.t-sign p { color: var(--slate); font-size: .92rem; }
+
+.t-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: flex; align-items: center; justify-content: flex-end; gap: 1.2rem;
+  background: rgba(7,23,31,.92); backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255,255,255,.12);
+  padding: .8rem clamp(1.2rem, 4vw, 3rem);
+}
+.t-bar .tot { text-align: right; }
+.t-bar .tot .lbl { display: block; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); }
+.t-bar .tot .sum { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold); }
+
+.t-host { margin-top: 3.2rem; border: 1px dashed rgba(255,255,255,.18); border-radius: 12px; }
+.t-host summary { cursor: pointer; padding: .9rem 1.2rem; font-size: .85rem; color: var(--slate); }
+.t-host__in { padding: 0 1.2rem 1.2rem; display: flex; flex-wrap: wrap; gap: .7rem; }
+.t-host__in .btn { font-size: .85rem; padding: .65rem 1.1rem; }
+.t-host__hint { width: 100%; font-size: .8rem; color: var(--slate); line-height: 1.5; }
+
+/* ---- Print: lys, blekkvennlig utgave (lagre som PDF) ---- */
+@media print {
+  body { background: #fff !important; color: #10222b !important; }
+  .t-top, .t-wrap { padding-left: 0; padding-right: 0; }
+  .t-bar, .t-host, .t-actions-screen { display: none !important; }
+  .t-hero p, .t-ticks li, .t-faq p, .t-item__b p, .t-card dd { color: #2c3e46 !important; }
+  .t-card, .t-item, .t-faq div { background: #fff !important; border-color: #d8dee2 !important; }
+  .t-card { position: static; }
+  .t-card__total .sum, .t-item__p, .t-sign .script { color: #8a6a35 !important; }
+  .t-top__meta, .t-card dt, .t-card__kick, .t-note, .t-sign p, .t-item__b p { color: #5c6d75 !important; }
+  .t-ticks li::before { color: #8a6a35; }
+  h1, h2, h3, .nav__name { color: #10222b !important; }
+  .nav__mark { background: #10222b !important; color: #e7b169 !important; }
+  a { color: #10222b; text-decoration: none; }
+}

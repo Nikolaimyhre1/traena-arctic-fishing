@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tilbud — Træna Arctic Fishing</title>
+  <meta name="description" content="Tilbud og ordreoversikt fra Træna Arctic Fishing." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#07171f" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="t-top">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__mark">TAF</span>
+      <span class="nav__name">Træna Arctic Fishing</span>
+    </a>
+    <span class="t-top__meta" id="tMeta">TILBUD</span>
+  </header>
+
+  <main class="t-wrap">
+
+    <div class="t-hero">
+      <p class="eyebrow" id="tKick">Havfiske — Selvær, Træna</p>
+      <h1 id="tTitle">Deres opphold ved storhavet</h1>
+      <p id="tLead"></p>
+    </div>
+
+    <div class="t-grid">
+
+      <!-- Sammendragskort (sticky) -->
+      <aside class="t-card" id="tCard">
+        <div class="t-card__img" id="tCardImg"></div>
+        <div class="t-card__body">
+          <p class="t-card__kick" id="tSummaryLbl">Sammendrag</p>
+          <dl id="tSummary"></dl>
+          <div class="t-card__total">
+            <span class="lbl" id="tTotalLbl">Totalt (overslag)</span>
+            <div class="sum" id="tTotalSum">—</div>
+            <p class="sub" id="tTotalSub"></p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Innhold -->
+      <div>
+        <section class="t-sec">
+          <h2 id="tItemsHead">Dette er med i bestillingen</h2>
+          <div class="t-items" id="tItems"></div>
+          <p class="t-note" id="tItemsNote"></p>
+        </section>
+
+        <section class="t-sec">
+          <h2 id="tInclHead">Hva som inngår</h2>
+          <ul class="t-ticks" id="tIncl"></ul>
+          <p class="t-note" id="tInclNote"></p>
+        </section>
+
+        <section class="t-sec t-faq" id="tFaq">
+          <h2 id="tFaqHead">Verdt å vite</h2>
+        </section>
+
+        <div class="t-sign">
+          <p class="script" id="tSignScript">Hilsen</p>
+          <p>Træna Arctic Fishing · 8742 Selvær, Træna<br />
+             <a href="mailto:traenaarctic@gmail.com" style="color:inherit">traenaarctic@gmail.com</a> ·
+             <a href="tel:+4790846461" style="color:inherit">+47 908 46 461</a></p>
+        </div>
+
+        <!-- Vertskapsverktøy (vises ikke på utskrift) -->
+        <details class="t-host" id="tHost">
+          <summary id="tHostSummary">For vertskapet (Træna Arctic Fishing)</summary>
+          <div class="t-host__in">
+            <a class="btn btn--gold" id="tHostCustomer" href="#">Åpne e-post til kunden</a>
+            <a class="btn btn--ghost" id="tHostDinTur" href="#">Åpne e-post til DinTur</a>
+            <button class="btn btn--ghost" id="tHostPrint" type="button">Skriv ut / lagre PDF</button>
+            <p class="t-host__hint" id="tHostHint"></p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bunnlinje: total + aksepter -->
+  <div class="t-bar" id="tBar">
+    <div class="tot">
+      <span class="lbl" id="tBarLbl">Totalt (overslag)</span>
+      <span class="sum" id="tBarSum">—</span>
+    </div>
+    <a class="btn btn--gold" id="tAccept" href="#">Godta tilbudet</a>
+  </div>
+
+  <script src="order-core.js"></script>
+  <script src="tilbud.js"></script>
+</body>
+</html>
