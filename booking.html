@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book — Træna Arctic Fishing</title>
-  <meta name="description" content="Book leilighet og båt på Selvær. Seks leiligheter og åtte havfiskebåter — se priser og send forespørsel, eller book direkte på DinTur." />
+  <meta name="description" content="Book leilighet og båt på Selvær. Seks leiligheter og åtte havfiskebåter — trykk på bildene for å sette sammen din egen bestilling, eller book direkte på DinTur." />
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -42,11 +42,11 @@
   <section class="pagehero" style="background-image:linear-gradient(180deg,rgba(7,23,31,.35),rgba(7,23,31,.80)),url('images/boat-fleet.jpg')">
     <div class="pagehero__inner">
       <p class="eyebrow" data-no="Book" data-en="Book" data-de="Buchen">Book</p>
-      <h1 data-no="Velg leilighet og båt" data-en="Pick your apartment and boat" data-de="Wohnung und Boot wählen">Velg leilighet og båt</h1>
+      <h1 data-no="Sett sammen din egen tur" data-en="Build your own trip" data-de="Stellen Sie Ihre Reise zusammen">Sett sammen din egen tur</h1>
       <p class="pagehero__lead"
-         data-no="Book direkte på DinTur, eller send oss en forespørsel under, så finner vi en ledig leilighet og båt til dere."
-         data-en="Book directly on DinTur, or send us an enquiry below and we'll match you with an available apartment and boat."
-         data-de="Buchen Sie direkt über DinTur, oder senden Sie uns unten eine Anfrage — wir finden eine freie Wohnung und ein Boot für Sie.">Book direkte på DinTur, eller send oss en forespørsel under, så finner vi en ledig leilighet og båt til dere.</p>
+         data-no="Trykk på leilighetene og båtene du ønsker — velg så mange dere trenger — og send forespørselen. Eller book direkte på DinTur."
+         data-en="Tap the apartments and boats you want — pick as many as you need — and send the enquiry. Or book directly on DinTur."
+         data-de="Tippen Sie auf die gewünschten Wohnungen und Boote — so viele Sie brauchen — und senden Sie die Anfrage. Oder buchen Sie direkt über DinTur.">Trykk på leilighetene og båtene du ønsker — velg så mange dere trenger — og send forespørselen. Eller book direkte på DinTur.</p>
       <a class="btn btn--gold"
          href="https://www.dintur.no/no/feriehus/traena-arctic-fishing/"
          data-no-href="https://www.dintur.no/no/feriehus/traena-arctic-fishing/"
@@ -63,68 +63,80 @@
       <p class="eyebrow" data-no="Leiligheter" data-en="Apartments" data-de="Wohnungen">Leiligheter</p>
       <h2 data-no="Seks leiligheter ved kaia" data-en="Six apartments by the quay" data-de="Sechs Wohnungen am Kai">Seks leiligheter ved kaia</h2>
       <p class="section__lead"
-         data-no="Fem leiligheter har tre soverom (75–85 m²); Vegardbryggen er en ettromsleilighet på 38 m². Prisen er fra-pris per uke og inkluderer sengetøy, håndklær, strøm, vann, Wi-Fi og sluttrengjøring."
-         data-en="Five apartments have three bedrooms (75–85 m²); Vegardbryggen is a 38 m² one-bedroom. The price is a 'from' price per week and includes bedding, towels, electricity, water, Wi-Fi and final cleaning."
-         data-de="Fünf Wohnungen haben drei Schlafzimmer (75–85 m²); Vegardbryggen ist eine 38-m²-Einzimmerwohnung. Der Preis ist ein Ab-Preis pro Woche und beinhaltet Bettwäsche, Handtücher, Strom, Wasser, WLAN und Endreinigung.">Fem leiligheter har tre soverom (75–85 m²); Vegardbryggen er en ettromsleilighet på 38 m². Prisen er fra-pris per uke og inkluderer sengetøy, håndklær, strøm, vann, Wi-Fi og sluttrengjøring.</p>
+         data-no="Trykk på en leilighet for å legge den til i bestillingen — trykk igjen for å fjerne. Prisen er fra-pris per uke og inkluderer sengetøy, håndklær, strøm, vann, Wi-Fi og sluttrengjøring."
+         data-en="Tap an apartment to add it to your order — tap again to remove it. The price is a 'from' price per week and includes bedding, towels, electricity, water, Wi-Fi and final cleaning."
+         data-de="Tippen Sie auf eine Wohnung, um sie zur Bestellung hinzuzufügen — erneut tippen zum Entfernen. Der Preis ist ein Ab-Preis pro Woche und beinhaltet Bettwäsche, Handtücher, Strom, Wasser, WLAN und Endreinigung.">Trykk på en leilighet for å legge den til i bestillingen — trykk igjen for å fjerne. Prisen er fra-pris per uke og inkluderer sengetøy, håndklær, strøm, vann, Wi-Fi og sluttrengjøring.</p>
     </div>
 
     <div class="units">
-      <article class="unit">
+      <article class="unit selectable" data-kind="unit" data-id="1" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
         <div class="unit__img" style="background-image:url('images/apt-gronnrevet.jpg')" role="img" aria-label="Grønnrevet"></div>
         <div class="unit__body">
           <h3>1 · Grønnrevet</h3>
-          <p class="unit__meta" data-no="3 soverom · 75 m²" data-en="3 bedrooms · 75 m²" data-de="3 Schlafzimmer · 75 m²">3 soverom · 75 m²</p>
+          <p class="unit__meta" data-no="3 soverom · 75 m² · inntil 6 personer" data-en="3 bedrooms · 75 m² · sleeps 6" data-de="3 Schlafzimmer · 75 m² · bis zu 6 Personen">3 soverom · 75 m² · inntil 6 personer</p>
           <p class="unit__desc" data-no="Oppkalt etter et fiskegrunne rett utenfor. Lyst kjøkken og god plass rundt bordet." data-en="Named after a fishing reef just offshore. A bright kitchen and room around the table." data-de="Benannt nach einem Fischriff vor der Küste. Helle Küche und viel Platz am Tisch.">Oppkalt etter et fiskegrunne rett utenfor. Lyst kjøkken og god plass rundt bordet.</p>
           <p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 18 122" data-eur="€1 580">kr 18 122</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p>
         </div>
       </article>
-      <article class="unit">
+      <article class="unit selectable" data-kind="unit" data-id="2" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
         <div class="unit__img" style="background-image:url('images/apt-nargtind.jpg')" role="img" aria-label="Nargtind"></div>
         <div class="unit__body">
           <h3>2 · Nargtind</h3>
-          <p class="unit__meta" data-no="3 soverom · 75 m²" data-en="3 bedrooms · 75 m²" data-de="3 Schlafzimmer · 75 m²">3 soverom · 75 m²</p>
+          <p class="unit__meta" data-no="3 soverom · 75 m² · inntil 6 personer" data-en="3 bedrooms · 75 m² · sleeps 6" data-de="3 Schlafzimmer · 75 m² · bis zu 6 Personen">3 soverom · 75 m² · inntil 6 personer</p>
           <p class="unit__desc" data-no="Bærer navnet til fjelltoppen i horisonten. Store vinduer og kveldssol inn i stua." data-en="Carries the name of the peak on the horizon. Big windows and evening sun in the living room." data-de="Trägt den Namen des Gipfels am Horizont. Große Fenster und Abendsonne im Wohnzimmer.">Bærer navnet til fjelltoppen i horisonten. Store vinduer og kveldssol inn i stua.</p>
           <p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 18 122" data-eur="€1 580">kr 18 122</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p>
         </div>
       </article>
-      <article class="unit">
+      <article class="unit selectable" data-kind="unit" data-id="3" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
         <div class="unit__img" style="background-image:url('images/apt-svanen.jpg')" role="img" aria-label="Svanen"></div>
         <div class="unit__body">
           <h3>3 · Svanen</h3>
-          <p class="unit__meta" data-no="3 soverom · 75 m²" data-en="3 bedrooms · 75 m²" data-de="3 Schlafzimmer · 75 m²">3 soverom · 75 m²</p>
+          <p class="unit__meta" data-no="3 soverom · 75 m² · inntil 6 personer" data-en="3 bedrooms · 75 m² · sleeps 6" data-de="3 Schlafzimmer · 75 m² · bis zu 6 Personen">3 soverom · 75 m² · inntil 6 personer</p>
           <p class="unit__desc" data-no="Etter en av de gamle båtene i været. Åpen stue og kjøkken med sjøen som nabo." data-en="After one of the old boats in the village. Open living room and kitchen with the sea as neighbour." data-de="Nach einem der alten Boote im Ort. Offenes Wohnzimmer und Küche mit dem Meer als Nachbarn.">Etter en av de gamle båtene i været. Åpen stue og kjøkken med sjøen som nabo.</p>
           <p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 18 122" data-eur="€1 580">kr 18 122</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p>
         </div>
       </article>
-      <article class="unit">
+      <article class="unit selectable" data-kind="unit" data-id="4" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
         <div class="unit__img" style="background-image:url('images/apt-sandflaesa.jpg')" role="img" aria-label="Sandflæsa"></div>
         <div class="unit__body">
           <h3>4 · Sandflæsa</h3>
-          <p class="unit__meta" data-no="3 soverom · 75 m²" data-en="3 bedrooms · 75 m²" data-de="3 Schlafzimmer · 75 m²">3 soverom · 75 m²</p>
+          <p class="unit__meta" data-no="3 soverom · 75 m² · inntil 6 personer" data-en="3 bedrooms · 75 m² · sleeps 6" data-de="3 Schlafzimmer · 75 m² · bis zu 6 Personen">3 soverom · 75 m² · inntil 6 personer</p>
           <p class="unit__desc" data-no="Navn fra en grunne i havgapet. Praktisk kjøkken og samlingssted for hele fiskefølget." data-en="Named after a shoal in the open sea. A practical kitchen and gathering spot for the whole party." data-de="Benannt nach einer Untiefe im offenen Meer. Praktische Küche und Treffpunkt für die ganze Truppe.">Navn fra en grunne i havgapet. Praktisk kjøkken og samlingssted for hele fiskefølget.</p>
           <p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 18 122" data-eur="€1 580">kr 18 122</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p>
         </div>
       </article>
-      <article class="unit">
+      <article class="unit selectable" data-kind="unit" data-id="5" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
         <div class="unit__img" style="background-image:url('images/apt-selvaergutt.jpg')" role="img" aria-label="Selværgutt"></div>
         <div class="unit__body">
           <h3>5 · Selværgutt</h3>
-          <p class="unit__meta" data-no="3 soverom · 85 m²" data-en="3 bedrooms · 85 m²" data-de="3 Schlafzimmer · 85 m²">3 soverom · 85 m²</p>
+          <p class="unit__meta" data-no="3 soverom · 85 m² · inntil 8 personer" data-en="3 bedrooms · 85 m² · sleeps 8" data-de="3 Schlafzimmer · 85 m² · bis zu 8 Personen">3 soverom · 85 m² · inntil 8 personer</p>
           <p class="unit__desc" data-no="Den største leiligheten, oppkalt etter en gammel selværbåt. Plass til et stort lag." data-en="The largest apartment, named after an old Selvær boat. Room for a big crew." data-de="Die größte Wohnung, benannt nach einem alten Selvær-Boot. Platz für eine große Crew.">Den største leiligheten, oppkalt etter en gammel selværbåt. Plass til et stort lag.</p>
           <p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 18 959" data-eur="€1 650">kr 18 959</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p>
         </div>
       </article>
-      <article class="unit">
+      <article class="unit selectable" data-kind="unit" data-id="6" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
         <div class="unit__img" style="background-image:url('images/apt-vegardbryggen.jpg')" role="img" aria-label="Vegardbryggen"></div>
         <div class="unit__body">
           <h3>6 · Vegardbryggen</h3>
-          <p class="unit__meta" data-no="1 soverom · 38 m² (åpen plan)" data-en="1 bedroom · 38 m² (open plan)" data-de="1 Schlafzimmer · 38 m² (offener Grundriss)">1 soverom · 38 m² (åpen plan)</p>
+          <p class="unit__meta" data-no="1 soverom · 38 m² (åpen plan) · inntil 3 personer" data-en="1 bedroom · 38 m² (open plan) · sleeps 3" data-de="1 Schlafzimmer · 38 m² (offener Grundriss) · bis zu 3 Personen">1 soverom · 38 m² (åpen plan) · inntil 3 personer</p>
           <p class="unit__desc" data-no="Den minste og koseligste, med åpen planløsning. Fin for to–tre." data-en="The smallest and cosiest, with an open-plan layout. Nice for two or three." data-de="Die kleinste und gemütlichste, mit offenem Grundriss. Schön für zwei bis drei.">Den minste og koseligste, med åpen planløsning. Fin for to–tre.</p>
           <p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 14 306" data-eur="€1 250">kr 14 306</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p>
         </div>
       </article>
     </div>
-    <p class="includes-note" data-no="Euro-priser er omtrentlige og avrundet. Endelig pris og betaling i NOK skjer hos DinTur." data-en="Euro prices are approximate and rounded. Final price and payment in NOK are handled by DinTur." data-de="Euro-Preise sind ungefähr und gerundet. Endpreis und Zahlung in NOK erfolgen über DinTur.">Euro-priser er omtrentlige og avrundet. Endelig pris og betaling i NOK skjer hos DinTur.</p>
+    <p class="includes-note" data-no="Euro-priser er omtrentlige og avrundet. Endelig pris bekreftes i tilbudet, og betaling skjer i NOK." data-en="Euro prices are approximate and rounded. The final price is confirmed in the offer, and payment is in NOK." data-de="Euro-Preise sind ungefähr und gerundet. Der Endpreis wird im Angebot bestätigt, die Zahlung erfolgt in NOK.">Euro-priser er omtrentlige og avrundet. Endelig pris bekreftes i tilbudet, og betaling skjer i NOK.</p>
   </section>
 
   <!-- ============ BOATS ============ -->
@@ -133,36 +145,93 @@
       <p class="eyebrow" data-no="Båter" data-en="Boats" data-de="Boote">Båter</p>
       <h2 data-no="Åtte havfiskebåter" data-en="Eight sea-fishing boats" data-de="Acht Hochseeboote">Åtte havfiskebåter</h2>
       <p class="section__lead"
-         data-no="Stødige aluminiumsbåter på 22–24,5 fot med 115–150 hk, ekkolodd og GPS. Prisen er fra-pris per uke og inkluderer ikke drivstoff og forsikring. Båtførerbevis kreves."
-         data-en="Sturdy aluminium boats of 22–24.5 foot with 115–150 hp, echo sounder and GPS. The price is a 'from' price per week and excludes fuel and insurance. A boating licence is required."
-         data-de="Robuste Aluminiumboote von 22–24,5 Fuß mit 115–150 PS, Echolot und GPS. Der Preis ist ein Ab-Preis pro Woche und enthält weder Treibstoff noch Versicherung. Ein Bootsführerschein ist erforderlich.">Stødige aluminiumsbåter på 22–24,5 fot med 115–150 hk, ekkolodd og GPS. Prisen er fra-pris per uke og inkluderer ikke drivstoff og forsikring. Båtførerbevis kreves.</p>
+         data-no="Trykk på en båt for å legge den til i bestillingen — trykk igjen for å fjerne. Stødige aluminiumsbåter på 22–24,5 fot med 115–150 hk, ekkolodd og GPS, plass til fire per båt. Prisen er fra-pris per uke og inkluderer ikke drivstoff og forsikring. Båtførerbevis kreves."
+         data-en="Tap a boat to add it to your order — tap again to remove it. Sturdy aluminium boats of 22–24.5 foot with 115–150 hp, echo sounder and GPS, seating four per boat. The price is a 'from' price per week and excludes fuel and insurance. A boating licence is required."
+         data-de="Tippen Sie auf ein Boot, um es zur Bestellung hinzuzufügen — erneut tippen zum Entfernen. Robuste Aluminiumboote von 22–24,5 Fuß mit 115–150 PS, Echolot und GPS, Platz für vier pro Boot. Der Preis ist ein Ab-Preis pro Woche und enthält weder Treibstoff noch Versicherung. Ein Bootsführerschein ist erforderlich.">Trykk på en båt for å legge den til i bestillingen — trykk igjen for å fjerne. Stødige aluminiumsbåter på 22–24,5 fot med 115–150 hk, ekkolodd og GPS, plass til fire per båt. Prisen er fra-pris per uke og inkluderer ikke drivstoff og forsikring. Båtførerbevis kreves.</p>
     </div>
 
     <div class="boatgrid">
-      <article class="boatcard"><h3>Båt 1</h3><p class="boatcard__spec">Kværnø 24 ft · 150 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 10 548" data-eur="€920">kr 10 548</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
-      <article class="boatcard"><h3>Båt 2</h3><p class="boatcard__spec">Aluboat 22 ft · 115 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
-      <article class="boatcard"><h3>Båt 3</h3><p class="boatcard__spec">Kværnø 22 ft · 140 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
-      <article class="boatcard"><h3>Båt 4</h3><p class="boatcard__spec">Aluboat 22 ft · 115 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
-      <article class="boatcard"><h3>Båt 5</h3><p class="boatcard__spec">Aluboat 22 ft · 115 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
-      <article class="boatcard"><h3>Båt 6</h3><p class="boatcard__spec">Aluboat 22 ft · 150 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
-      <article class="boatcard"><h3>Båt 7</h3><p class="boatcard__spec">Aluboat 24,5 ft · 150 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 10 831" data-eur="€945">kr 10 831</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
-      <article class="boatcard"><h3>Båt 8</h3><p class="boatcard__spec">Aluboat 22 ft · 115 hk</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></article>
+      <article class="boatcard selectable" data-kind="boat" data-id="1" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/bat.jpg')" role="img" aria-label="Båt 1"></div>
+        <div class="boatcard__body"><h3>Båt 1</h3><p class="boatcard__spec" data-no="Kværnø 24 ft · 150 hk · maks 4 pers" data-en="Kværnø 24 ft · 150 hp · max 4 pers" data-de="Kværnø 24 ft · 150 PS · max. 4 Pers.">Kværnø 24 ft · 150 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 10 548" data-eur="€920">kr 10 548</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
+      <article class="boatcard selectable" data-kind="boat" data-id="2" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/boat-action.jpg')" role="img" aria-label="Båt 2"></div>
+        <div class="boatcard__body"><h3>Båt 2</h3><p class="boatcard__spec" data-no="Aluboat 22 ft · 115 hk · maks 4 pers" data-en="Aluboat 22 ft · 115 hp · max 4 pers" data-de="Aluboat 22 ft · 115 PS · max. 4 Pers.">Aluboat 22 ft · 115 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
+      <article class="boatcard selectable" data-kind="boat" data-id="3" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/boat-fleet.jpg')" role="img" aria-label="Båt 3"></div>
+        <div class="boatcard__body"><h3>Båt 3</h3><p class="boatcard__spec" data-no="Kværnø 22 ft · 140 hk · maks 4 pers" data-en="Kværnø 22 ft · 140 hp · max 4 pers" data-de="Kværnø 22 ft · 140 PS · max. 4 Pers.">Kværnø 22 ft · 140 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
+      <article class="boatcard selectable" data-kind="boat" data-id="4" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/bat.jpg')" role="img" aria-label="Båt 4"></div>
+        <div class="boatcard__body"><h3>Båt 4</h3><p class="boatcard__spec" data-no="Aluboat 22 ft · 115 hk · maks 4 pers" data-en="Aluboat 22 ft · 115 hp · max 4 pers" data-de="Aluboat 22 ft · 115 PS · max. 4 Pers.">Aluboat 22 ft · 115 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
+      <article class="boatcard selectable" data-kind="boat" data-id="5" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/boat-action.jpg')" role="img" aria-label="Båt 5"></div>
+        <div class="boatcard__body"><h3>Båt 5</h3><p class="boatcard__spec" data-no="Aluboat 22 ft · 115 hk · maks 4 pers" data-en="Aluboat 22 ft · 115 hp · max 4 pers" data-de="Aluboat 22 ft · 115 PS · max. 4 Pers.">Aluboat 22 ft · 115 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
+      <article class="boatcard selectable" data-kind="boat" data-id="6" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/boat-fleet.jpg')" role="img" aria-label="Båt 6"></div>
+        <div class="boatcard__body"><h3>Båt 6</h3><p class="boatcard__spec" data-no="Aluboat 22 ft · 150 hk · maks 4 pers" data-en="Aluboat 22 ft · 150 hp · max 4 pers" data-de="Aluboat 22 ft · 150 PS · max. 4 Pers.">Aluboat 22 ft · 150 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
+      <article class="boatcard selectable" data-kind="boat" data-id="7" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/bat.jpg')" role="img" aria-label="Båt 7"></div>
+        <div class="boatcard__body"><h3>Båt 7</h3><p class="boatcard__spec" data-no="Aluboat 24,5 ft · 150 hk · maks 4 pers" data-en="Aluboat 24.5 ft · 150 hp · max 4 pers" data-de="Aluboat 24,5 ft · 150 PS · max. 4 Pers.">Aluboat 24,5 ft · 150 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 10 831" data-eur="€945">kr 10 831</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
+      <article class="boatcard selectable" data-kind="boat" data-id="8" tabindex="0" role="button" aria-pressed="false">
+        <span class="pick" aria-hidden="true"></span>
+        <span class="pick-label" data-no="Velg" data-en="Select" data-de="Wählen">Velg</span>
+        <div class="boatcard__img" style="background-image:url('images/boat-action.jpg')" role="img" aria-label="Båt 8"></div>
+        <div class="boatcard__body"><h3>Båt 8</h3><p class="boatcard__spec" data-no="Aluboat 22 ft · 115 hk · maks 4 pers" data-en="Aluboat 22 ft · 115 hp · max 4 pers" data-de="Aluboat 22 ft · 115 PS · max. 4 Pers.">Aluboat 22 ft · 115 hk · maks 4 pers</p><p class="unit__price"><span class="from" data-no="fra" data-en="from" data-de="ab">fra</span> <span class="price" data-nok="kr 9 988" data-eur="€870">kr 9 988</span> <span class="per" data-no="/uke" data-en="/week" data-de="/Woche">/uke</span></p></div>
+      </article>
     </div>
     <figure class="imgband" style="background-image:url('images/boat-action.jpg')" role="img" aria-label="Båt på fisketur"></figure>
   </section>
 
-  <!-- ============ ENQUIRY FORM ============ -->
+  <!-- ============ ORDER + ENQUIRY FORM ============ -->
   <section class="section" id="foresporsel">
     <div class="section__head">
       <p class="eyebrow" data-no="Forespørsel" data-en="Enquiry" data-de="Anfrage">Forespørsel</p>
-      <h2 data-no="Send oss en forespørsel" data-en="Send us an enquiry" data-de="Senden Sie uns eine Anfrage">Send oss en forespørsel</h2>
+      <h2 data-no="Send oss bestillingen" data-en="Send us your order" data-de="Senden Sie uns Ihre Bestellung">Send oss bestillingen</h2>
       <p class="section__lead"
-         data-no="Velg leilighet og båt om du har et ønske, eller la oss foreslå. Vi svarer så fort vi kan."
-         data-en="Pick an apartment and boat if you have a preference, or let us suggest. We reply as soon as we can."
-         data-de="Wählen Sie Wohnung und Boot, wenn Sie einen Wunsch haben, oder lassen Sie uns vorschlagen. Wir antworten so schnell wie möglich.">Velg leilighet og båt om du har et ønske, eller la oss foreslå. Vi svarer så fort vi kan.</p>
+         data-no="Det du har valgt over legger seg her. Fyll inn datoer og kontaktinfo, så sender vi et ferdig tilbud tilbake. Har du ikke valgt noe, foreslår vi for deg."
+         data-en="What you selected above appears here. Add dates and contact details and we'll send you a complete offer. If you haven't picked anything, we'll suggest for you."
+         data-de="Ihre Auswahl von oben erscheint hier. Ergänzen Sie Daten und Kontaktinfos, und wir senden Ihnen ein fertiges Angebot. Wenn Sie nichts gewählt haben, machen wir einen Vorschlag.">Det du har valgt over legger seg her. Fyll inn datoer og kontaktinfo, så sender vi et ferdig tilbud tilbake. Har du ikke valgt noe, foreslår vi for deg.</p>
     </div>
 
-    <form class="form" id="enquiryForm">
+    <div class="order" id="orderBox" aria-live="polite">
+      <h3 data-no="Din bestilling" data-en="Your order" data-de="Ihre Bestellung">Din bestilling</h3>
+      <p class="order__empty" id="orderEmpty"
+         data-no="Ingenting valgt ennå — trykk på leilighetene og båtene over for å legge dem til."
+         data-en="Nothing selected yet — tap the apartments and boats above to add them."
+         data-de="Noch nichts gewählt — tippen Sie oben auf Wohnungen und Boote, um sie hinzuzufügen.">Ingenting valgt ennå — trykk på leilighetene og båtene over for å legge dem til.</p>
+      <ul class="order__list" id="orderList"></ul>
+      <div class="order__total" id="orderTotal" hidden>
+        <span class="lbl"><span data-no="Prisoverslag (fra-priser)" data-en="Price estimate (from-prices)" data-de="Preisschätzung (Ab-Preise)">Prisoverslag (fra-priser)</span> <span id="orderPeriod"></span></span>
+        <span class="price" id="orderSum" data-nok="" data-eur=""></span>
+      </div>
+      <p class="order__note"
+         data-no="Fra-priser per uke. Endelig pris bekreftes i tilbudet fra oss. Drivstoff og forsikring på båt kommer i tillegg."
+         data-en="From-prices per week. The final price is confirmed in our offer. Boat fuel and insurance are extra."
+         data-de="Ab-Preise pro Woche. Der Endpreis wird in unserem Angebot bestätigt. Treibstoff und Bootsversicherung sind extra.">Fra-priser per uke. Endelig pris bekreftes i tilbudet fra oss. Drivstoff og forsikring på båt kommer i tillegg.</p>
+    </div>
+
+    <form class="form" id="orderForm">
       <div class="form__row">
         <label class="field">
           <span data-no="Navn" data-en="Name" data-de="Name">Navn</span>
@@ -176,43 +245,15 @@
       <div class="form__row">
         <label class="field">
           <span data-no="Fra dato" data-en="From date" data-de="Von Datum">Fra dato</span>
-          <input type="date" name="fra" />
+          <input type="date" name="fra" required />
         </label>
         <label class="field">
           <span data-no="Til dato" data-en="To date" data-de="Bis Datum">Til dato</span>
-          <input type="date" name="til" />
+          <input type="date" name="til" required />
         </label>
         <label class="field field--narrow">
           <span data-no="Antall" data-en="Guests" data-de="Personen">Antall</span>
           <input type="number" name="antall" min="1" max="40" />
-        </label>
-      </div>
-      <div class="form__row">
-        <label class="field">
-          <span data-no="Leilighet" data-en="Apartment" data-de="Wohnung">Leilighet</span>
-          <select name="leilighet">
-            <option value="" data-no="Ingen preferanse" data-en="No preference" data-de="Keine Präferenz">Ingen preferanse</option>
-            <option value="Grønnrevet">1 · Grønnrevet</option>
-            <option value="Nargtind">2 · Nargtind</option>
-            <option value="Svanen">3 · Svanen</option>
-            <option value="Sandflæsa">4 · Sandflæsa</option>
-            <option value="Selværgutt">5 · Selværgutt</option>
-            <option value="Vegardbryggen">6 · Vegardbryggen</option>
-          </select>
-        </label>
-        <label class="field">
-          <span data-no="Båt" data-en="Boat" data-de="Boot">Båt</span>
-          <select name="bat">
-            <option value="" data-no="Ingen preferanse" data-en="No preference" data-de="Keine Präferenz">Ingen preferanse</option>
-            <option value="Båt 1 (24 ft / 150 hk)">Båt 1 · 24 ft / 150 hk</option>
-            <option value="Båt 2 (22 ft / 115 hk)">Båt 2 · 22 ft / 115 hk</option>
-            <option value="Båt 3 (22 ft / 140 hk)">Båt 3 · 22 ft / 140 hk</option>
-            <option value="Båt 4 (22 ft / 115 hk)">Båt 4 · 22 ft / 115 hk</option>
-            <option value="Båt 5 (22 ft / 115 hk)">Båt 5 · 22 ft / 115 hk</option>
-            <option value="Båt 6 (22 ft / 150 hk)">Båt 6 · 22 ft / 150 hk</option>
-            <option value="Båt 7 (24,5 ft / 150 hk)">Båt 7 · 24,5 ft / 150 hk</option>
-            <option value="Båt 8 (22 ft / 115 hk)">Båt 8 · 22 ft / 115 hk</option>
-          </select>
         </label>
       </div>
       <label class="field">
@@ -220,7 +261,7 @@
         <textarea name="melding" rows="4" data-no-ph="Hva har dere lyst til å oppleve?" data-en-ph="What are you hoping to experience?" data-de-ph="Was möchten Sie erleben?" placeholder="Hva har dere lyst til å oppleve?"></textarea>
       </label>
       <button type="submit" class="btn btn--gold" data-no="Send forespørsel" data-en="Send enquiry" data-de="Anfrage senden">Send forespørsel</button>
-      <p class="form__note" data-no="Ved å sende åpner vi e-postprogrammet ditt med forespørselen klar." data-en="Sending opens your email app with the enquiry ready to go." data-de="Beim Senden öffnet sich Ihr E-Mail-Programm mit der fertigen Anfrage.">Ved å sende åpner vi e-postprogrammet ditt med forespørselen klar.</p>
+      <p class="form__note" data-no="Ved å sende åpner vi e-postprogrammet ditt med forespørselen og en lenke til ordreoversikten klar." data-en="Sending opens your email app with the enquiry and a link to your order overview ready to go." data-de="Beim Senden öffnet sich Ihr E-Mail-Programm mit der Anfrage und einem Link zur Bestellübersicht.">Ved å sende åpner vi e-postprogrammet ditt med forespørselen og en lenke til ordreoversikten klar.</p>
       <p class="form__note"><a href="personvern.html" style="color:inherit;text-decoration:underline" data-no="Slik behandler vi opplysningene dine →" data-en="How we handle your data →" data-de="So gehen wir mit Ihren Daten um →">Slik behandler vi opplysningene dine →</a></p>
     </form>
   </section>
@@ -242,5 +283,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="order-core.js"></script>
+  <script src="booking.js"></script>
 </body>
 </html>
