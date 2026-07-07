@@ -15,23 +15,23 @@
 
   // ---- Enheter (kapasitet fra dintur.no/no/feriehus/traena-arctic-fishing) ----
   var UNITS = [
-    { id: "1", name: "Grønnrevet",    nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "images/apt-gronnrevet.jpg" },
-    { id: "2", name: "Nargtind",      nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "images/apt-nargtind.jpg" },
-    { id: "3", name: "Svanen",        nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "images/apt-svanen.jpg" },
-    { id: "4", name: "Sandflæsa",     nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "images/apt-sandflaesa.jpg" },
-    { id: "5", name: "Selværgutt",    nok: 18959, eur: 1650, cap: 8, br: 3, m2: 85, img: "images/apt-selvaergutt.jpg" },
-    { id: "6", name: "Vegardbryggen", nok: 14306, eur: 1250, cap: 3, br: 1, m2: 38, img: "images/apt-vegardbryggen.jpg" }
+    { id: "1", name: "Grønnrevet",    nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "/images/apt-gronnrevet.jpg" },
+    { id: "2", name: "Nargtind",      nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "/images/apt-nargtind.jpg" },
+    { id: "3", name: "Svanen",        nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "/images/apt-svanen.jpg" },
+    { id: "4", name: "Sandflæsa",     nok: 18122, eur: 1580, cap: 6, br: 3, m2: 75, img: "/images/apt-sandflaesa.jpg" },
+    { id: "5", name: "Selværgutt",    nok: 18959, eur: 1650, cap: 8, br: 3, m2: 85, img: "/images/apt-selvaergutt.jpg" },
+    { id: "6", name: "Vegardbryggen", nok: 14306, eur: 1250, cap: 3, br: 1, m2: 38, img: "/images/apt-vegardbryggen.jpg" }
   ];
 
   var BOATS = [
-    { id: "1", name: "Båt 1", spec: "Kværnø 24 ft · 150 hk",    nok: 10548, eur: 920, cap: 4, img: "images/bat.jpg" },
-    { id: "2", name: "Båt 2", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "images/boat-action.jpg" },
-    { id: "3", name: "Båt 3", spec: "Kværnø 22 ft · 140 hk",    nok: 9988,  eur: 870, cap: 4, img: "images/boat-fleet.jpg" },
-    { id: "4", name: "Båt 4", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "images/bat.jpg" },
-    { id: "5", name: "Båt 5", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "images/boat-action.jpg" },
-    { id: "6", name: "Båt 6", spec: "Aluboat 22 ft · 150 hk",   nok: 9988,  eur: 870, cap: 4, img: "images/boat-fleet.jpg" },
-    { id: "7", name: "Båt 7", spec: "Aluboat 24,5 ft · 150 hk", nok: 10831, eur: 945, cap: 4, img: "images/bat.jpg" },
-    { id: "8", name: "Båt 8", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "images/boat-action.jpg" }
+    { id: "1", name: "Båt 1", spec: "Kværnø 24 ft · 150 hk",    nok: 10548, eur: 920, cap: 4, img: "/images/bat.jpg" },
+    { id: "2", name: "Båt 2", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "/images/boat-action.jpg" },
+    { id: "3", name: "Båt 3", spec: "Kværnø 22 ft · 140 hk",    nok: 9988,  eur: 870, cap: 4, img: "/images/boat-fleet.jpg" },
+    { id: "4", name: "Båt 4", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "/images/bat.jpg" },
+    { id: "5", name: "Båt 5", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "/images/boat-action.jpg" },
+    { id: "6", name: "Båt 6", spec: "Aluboat 22 ft · 150 hk",   nok: 9988,  eur: 870, cap: 4, img: "/images/boat-fleet.jpg" },
+    { id: "7", name: "Båt 7", spec: "Aluboat 24,5 ft · 150 hk", nok: 10831, eur: 945, cap: 4, img: "/images/bat.jpg" },
+    { id: "8", name: "Båt 8", spec: "Aluboat 22 ft · 115 hk",   nok: 9988,  eur: 870, cap: 4, img: "/images/boat-action.jpg" }
   ];
 
   function unitById(id) { return UNITS.filter(function (u) { return u.id === String(id); })[0] || null; }
@@ -95,31 +95,75 @@
     var dd = String(d.getDate()); if (dd.length < 2) dd = "0" + dd;
     return d.getFullYear() + "-" + mm + "-" + dd;
   }
+  // Navn -> ren URL-bit uten %-koder: "Åse Sørlie" -> "Aase-Soerlie"
+  function slugName(name) {
+    if (!name) return "";
+    var map = { "æ": "ae", "ø": "oe", "å": "aa", "Æ": "Ae", "Ø": "Oe", "Å": "Aa",
+                "ä": "ae", "ö": "oe", "ü": "ue", "Ä": "Ae", "Ö": "Oe", "Ü": "Ue", "ß": "ss",
+                "é": "e", "è": "e", "É": "E", "á": "a", "à": "a" };
+    var s = String(name).replace(/[æøåÆØÅäöüÄÖÜßéèÉáà]/g, function (c) { return map[c] || c; });
+    s = s.replace(/[^A-Za-z0-9 ]+/g, " ").trim().replace(/\s+/g, "-");
+    return s.slice(0, 40);
+  }
+  function unslugName(slug) { return (slug || "").replace(/-/g, " "); }
+
+  // Pen lenke uten %-koder og uten e-post:
+  //   /tilbud/TAF-XXXXXX/no/2026-07-11/2026-07-18/6/l1.5-b2/Ola-Nordmann?d=2026-07-07
+  // «l1.5» = leilighet 1 og 5, «b2» = båt 2, «x» = ikke oppgitt.
   function tilbudUrl(order, origin) {
     var base;
-    if (origin && origin.indexOf("traena-arctic-fishing") !== -1) base = origin + "/tilbud";
-    else if (origin && origin.indexOf("http") === 0) base = origin + "/tilbud.html";
-    else base = SITE + "/tilbud";
-    var q = [];
-    function add(k, v) { if (v !== undefined && v !== null && v !== "") q.push(k + "=" + encodeURIComponent(v)); }
-    add("id", order.id); add("d", order.created);
-    add("n", order.name); add("e", order.email);
-    add("fra", order.fra); add("til", order.til); add("p", order.guests);
-    add("u", (order.units || []).join(",")); add("b", (order.boats || []).join(","));
-    add("lang", order.lang); add("m", (order.msg || "").slice(0, 500));
-    return base + "?" + q.join("&");
+    if (origin && origin.indexOf("http") === 0 && origin.indexOf("localhost") === -1 && origin.indexOf("127.0.0.1") === -1) {
+      base = origin;
+    } else {
+      base = SITE;
+    }
+    var items = [];
+    if ((order.units || []).length) items.push("l" + order.units.join("."));
+    if ((order.boats || []).length) items.push("b" + order.boats.join("."));
+    var seg = [
+      order.id || makeId(),
+      order.lang || "no",
+      order.fra || "x",
+      order.til || "x",
+      order.guests || "x",
+      items.length ? items.join("-") : "x"
+    ];
+    var nm = slugName(order.name);
+    if (nm) seg.push(nm);
+    var url = base + "/tilbud/" + seg.join("/");
+    if (order.created) url += "?d=" + order.created;
+    return url;
   }
-  // Motsatt vei: URLSearchParams -> order (brukes av tilbud.js)
-  function orderFromParams(get) {
+
+  // Motsatt vei: pathname (+ query-fallback for gamle lenker) -> order
+  function orderFromParams(get, pathname) {
     function csv(v) { return v ? v.split(",").filter(Boolean) : []; }
-    return {
-      id: get("id") || makeId(), created: get("d") || todayIso(),
+    var o = {
+      id: get("id") || "", created: get("d") || "",
       name: get("n") || "", email: get("e") || "",
       fra: get("fra") || "", til: get("til") || "", guests: get("p") || "",
       units: csv(get("u")), boats: csv(get("b")),
-      lang: (["no", "en", "de"].indexOf(get("lang")) !== -1 ? get("lang") : "no"),
-      msg: get("m") || ""
+      lang: get("lang") || "", msg: get("m") || ""
     };
+    // Sti-format: /tilbud/<id>/<lang>/<fra>/<til>/<pers>/<items>/<navn>
+    var m = /\/tilbud\/(.+)$/.exec(pathname || "");
+    if (m) {
+      var seg = m[1].split("/").map(function (s) { return decodeURIComponent(s); });
+      function val(i) { return seg[i] && seg[i] !== "x" ? seg[i] : ""; }
+      o.id = val(0) || o.id;
+      o.lang = val(1) || o.lang;
+      if (/^\d{4}-\d{2}-\d{2}$/.test(val(2))) o.fra = val(2);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(val(3))) o.til = val(3);
+      if (/^\d+$/.test(val(4))) o.guests = val(4);
+      (val(5) || "").split("-").forEach(function (part) {
+        if (/^l[\d.]+$/.test(part)) o.units = part.slice(1).split(".").filter(Boolean);
+        if (/^b[\d.]+$/.test(part)) o.boats = part.slice(1).split(".").filter(Boolean);
+      });
+      if (val(6)) o.name = unslugName(val(6));
+    }
+    if (!o.id) o.id = makeId();
+    if (["no", "en", "de"].indexOf(o.lang) === -1) o.lang = "no";
+    return o;
   }
 
   function listNames(order) {
