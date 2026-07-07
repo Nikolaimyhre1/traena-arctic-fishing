@@ -11,7 +11,7 @@
   var TAF = window.TAF;
 
   var params = new URLSearchParams(window.location.search);
-  var order = TAF.orderFromParams(function (k) { return params.get(k); });
+  var order = TAF.orderFromParams(function (k) { return params.get(k); }, window.location.pathname);
   var lang = order.lang;
   document.documentElement.lang = lang;
 
@@ -50,7 +50,8 @@
       acceptBody: "Hei,\n\nVi godtar tilbudet {id} for perioden {period}.\n\n{name}",
       hostSummary: "For vertskapet (Træna Arctic Fishing)",
       hostCustomer: "Åpne e-post til kunden", hostDinTur: "Åpne e-post til DinTur", hostPrint: "Skriv ut / lagre PDF",
-      hostHint: "«E-post til kunden» åpner et ferdig utkast med tilbudslenken til {email}. «E-post til DinTur» åpner et ferdig utkast til office@dintur.no om at datoene er opptatt. Denne boksen vises ikke på utskrift."
+      hostHint: "«E-post til kunden» åpner et ferdig utkast med tilbudslenken til {email}. «E-post til DinTur» åpner et ferdig utkast til office@dintur.no om at datoene er opptatt. Denne boksen vises ikke på utskrift.",
+      hostHintNoEmail: "«E-post til kunden» åpner et ferdig utkast med tilbudslenken — lim inn kundens e-postadresse i Til-feltet (den står i forespørselen dere fikk). «E-post til DinTur» åpner et ferdig utkast til office@dintur.no om at datoene er opptatt. Denne boksen vises ikke på utskrift."
     },
     en: {
       docTitle: "Offer — Træna Arctic Fishing",
@@ -85,7 +86,8 @@
       acceptBody: "Hi,\n\nWe accept offer {id} for the period {period}.\n\n{name}",
       hostSummary: "For the hosts (Træna Arctic Fishing)",
       hostCustomer: "Open email to the guest", hostDinTur: "Open email to DinTur", hostPrint: "Print / save as PDF",
-      hostHint: "“Email to the guest” opens a ready draft with the offer link to {email}. “Email to DinTur” opens a ready draft to office@dintur.no saying the dates are taken. This box is hidden when printing."
+      hostHint: "“Email to the guest” opens a ready draft with the offer link to {email}. “Email to DinTur” opens a ready draft to office@dintur.no saying the dates are taken. This box is hidden when printing.",
+      hostHintNoEmail: "“Email to the guest” opens a ready draft with the offer link — paste the guest's email address in the To field (it's in the enquiry you received). “Email to DinTur” opens a ready draft to office@dintur.no saying the dates are taken. This box is hidden when printing."
     },
     de: {
       docTitle: "Angebot — Træna Arctic Fishing",
@@ -120,7 +122,8 @@
       acceptBody: "Hallo,\n\nwir nehmen das Angebot {id} für den Zeitraum {period} an.\n\n{name}",
       hostSummary: "Für die Gastgeber (Træna Arctic Fishing)",
       hostCustomer: "E-Mail an den Gast öffnen", hostDinTur: "E-Mail an DinTur öffnen", hostPrint: "Drucken / als PDF speichern",
-      hostHint: "„E-Mail an den Gast“ öffnet einen fertigen Entwurf mit dem Angebotslink an {email}. „E-Mail an DinTur“ öffnet einen fertigen Entwurf an office@dintur.no, dass die Termine belegt sind. Diese Box wird beim Drucken ausgeblendet."
+      hostHint: "„E-Mail an den Gast“ öffnet einen fertigen Entwurf mit dem Angebotslink an {email}. „E-Mail an DinTur“ öffnet einen fertigen Entwurf an office@dintur.no, dass die Termine belegt sind. Diese Box wird beim Drucken ausgeblendet.",
+      hostHintNoEmail: "„E-Mail an den Gast“ öffnet einen fertigen Entwurf mit dem Angebotslink — fügen Sie die E-Mail-Adresse des Gastes in das An-Feld ein (sie steht in der erhaltenen Anfrage). „E-Mail an DinTur“ öffnet einen fertigen Entwurf an office@dintur.no, dass die Termine belegt sind. Diese Box wird beim Drucken ausgeblendet."
     }
   };
   var t = T[lang] || T.no;
@@ -136,7 +139,7 @@
 
   // ---- Topp + hero ----
   document.title = t.docTitle;
-  el("tMeta").textContent = t.meta + " · " + order.id + " · " + TAF.fmtDate(order.created);
+  el("tMeta").textContent = t.meta + " · " + order.id + (order.created ? " · " + TAF.fmtDate(order.created) : "");
   el("tKick").textContent = t.kick;
   el("tTitle").textContent = t.title;
   el("tLead").textContent = order.name ? fill(t.leadNamed, { name: order.name }) : t.leadAnon;
@@ -144,7 +147,7 @@
   // ---- Sammendragskort ----
   el("tSummaryLbl").textContent = t.summary;
   el("tCardImg").style.backgroundImage =
-    "url('" + (units[0] ? units[0].img : (boats[0] ? boats[0].img : "images/hero.jpg")) + "')";
+    "url('" + (units[0] ? units[0].img : (boats[0] ? boats[0].img : "/images/hero.jpg")) + "')";
   var dl = el("tSummary");
   function row(label, value) {
     if (!value) return;
@@ -238,5 +241,7 @@
   el("tHostDinTur").href = TAF.mailtoHref(TAF.dinTurMail(order));
   el("tHostPrint").textContent = t.hostPrint;
   el("tHostPrint").addEventListener("click", function () { window.print(); });
-  el("tHostHint").textContent = fill(t.hostHint, { email: order.email || "…" });
+  el("tHostHint").textContent = order.email
+    ? fill(t.hostHint, { email: order.email })
+    : (t.hostHintNoEmail || t.hostHint);
 })();
