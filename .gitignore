@@ -7,3 +7,6 @@ _dintur2/
 # macOS
 .DS_Store
 .vercel
+
+# booking prototype leftover — local only, never commit/deploy
+booking-app/
