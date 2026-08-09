@@ -4,3 +4,10 @@ PUBLISER.md
 NOTES-usikkerheter.md
 NATTRAPPORT.md
 .context/
+
+# Source photo libraries + booking prototype — never deploy (large, local-only)
+_originals/
+_brochure/
+_dintur/
+_dintur2/
+booking-app/
