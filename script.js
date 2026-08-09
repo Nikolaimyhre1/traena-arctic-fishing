@@ -143,15 +143,16 @@
       var lang = document.documentElement.lang;
 
       var L = {
-        no: { subj: "Forespørsel — Træna Arctic Fishing", navn: "Navn", epost: "E-post", fra: "Fra", til: "Til", antall: "Antall", leilighet: "Leilighet", bat: "Båt" },
-        en: { subj: "Enquiry — Træna Arctic Fishing", navn: "Name", epost: "Email", fra: "From", til: "To", antall: "Guests", leilighet: "Apartment", bat: "Boat" },
-        de: { subj: "Anfrage — Træna Arctic Fishing", navn: "Name", epost: "E-Mail", fra: "Von", til: "Bis", antall: "Personen", leilighet: "Wohnung", bat: "Boot" }
+        no: { subj: "Forespørsel — Træna Arctic Fishing", navn: "Navn", epost: "E-post", mobil: "Mobil", fra: "Fra", til: "Til", antall: "Antall", leilighet: "Leilighet", bat: "Båt" },
+        en: { subj: "Enquiry — Træna Arctic Fishing", navn: "Name", epost: "Email", mobil: "Mobile", fra: "From", til: "To", antall: "Guests", leilighet: "Apartment", bat: "Boat" },
+        de: { subj: "Anfrage — Træna Arctic Fishing", navn: "Name", epost: "E-Mail", mobil: "Handynummer", fra: "Von", til: "Bis", antall: "Personen", leilighet: "Wohnung", bat: "Boot" }
       };
       var t = L[lang] || L.no;
 
       var lines = [
         t.navn + ": " + (data.get("navn") || ""),
         t.epost + ": " + (data.get("epost") || ""),
+        t.mobil + ": " + (data.get("mobil") || ""),
         t.fra + ": " + (data.get("fra") || ""),
         t.til + ": " + (data.get("til") || ""),
         t.antall + ": " + (data.get("antall") || "")
